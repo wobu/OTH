@@ -1,0 +1,11 @@
+              ^
+PS Microsoft.PowerShell.Core\FileSystem::\\fs-home.hs-regensburg.de\home\buw32270\PG1\Uebungen\Ueb2> gcc .\Addition.c -o .\Addition
+.\Addition.c: In function 'main':
+.\Addition.c:5:13: error: 'x' undeclared (first use in this function)
+ scanf("%i",&x);
+             ^
+.\Addition.c:5:13: note: each undeclared identifier is reported only once for each function it appears in
+.\Addition.c:8:14: error: 'y' undeclared (first use in this function)
+ scanf("%i", &y);
+              ^
+PS Microsoft.PowerShell.Core\FileSystem::\\fs-home.hs-regensburg.de\home\buw32270\PG1\Uebungen\Ueb2>
