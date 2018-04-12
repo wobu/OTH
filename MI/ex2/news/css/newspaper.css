@@ -1,0 +1,82 @@
+/* font configurations */
+@font-face {
+    font-family: Roboto Condensed Light;
+    src: url("../fonts/RobotoCondensed-Light.ttf"); 
+}
+
+/* Basic Styles */
+body {
+    font-family: 'Roboto Condensed Light';
+    max-width: 760px;
+    margin: auto;
+}
+
+#header {
+    height: 60px;
+    border-bottom: 1px black solid
+}
+
+#header h1 {
+    margin: 10px;
+    font-size: 36px;
+}
+
+#footer {
+    clear: both;
+}
+
+#footer ul {
+    text-align: center;
+    list-style-type: none
+}
+
+#footer ul li {
+    display: inline;
+}
+
+#footer ul li::before {
+    content: '|'
+}
+
+#footer ul li:first-child:before {
+    display: none
+}
+
+#footer ul a {
+    font-size: 14px
+}
+
+.article h3 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 22px
+}
+
+.article.small h3, .article.wide h3 {
+    font-size: 18px
+}
+
+.article p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px
+}
+
+div.article {
+    overflow: hidden;
+    float: left;
+    padding: 10px;
+}
+
+div.article.wide {
+    width: 45%;
+}
+
+div.article.small {
+    width: 30%
+}
+
+div.panel {
+    /* margin: auto;
+    clear: both; */
+}
