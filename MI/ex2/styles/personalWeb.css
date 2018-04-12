@@ -8,15 +8,29 @@ body {
     font-family: 'Roboto Condensed Light'
 }
 
-h1 {
+#header h1 {
     padding: 20px;
-    height: 100px;
     font-size: 36px;
 }
 
-h1, p.footer {
+#header {
+    height: 100px
+}
+
+#header h1, #footer p {
     background-color: #c2185b;
     color: white
+}
+
+#hobbies, #about_me {
+    background-color: #FFF;
+    float: left;
+    margin: 10px;
+    width: 350px
+}
+
+#footer {
+    clear: both
 }
 
 .redtext {
@@ -24,6 +38,8 @@ h1, p.footer {
 }
 
 img {
+    float: left;
+    margin: 5px;
     border-radius: 100%
 }
 
