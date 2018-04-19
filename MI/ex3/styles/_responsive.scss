@@ -1,0 +1,18 @@
+$small-screen-width: 360px;
+
+@media only screen and (max-width: $small-screen-width) {
+    #header {
+        height: 30px;
+        padding: 5px;
+
+        h1 {
+            font-size: 24px;
+            margin: 0px;
+        }
+    }
+
+    .content_panel {
+        // max-width: 360px;
+        width: 90%;
+    }
+}
