@@ -1,0 +1,32 @@
+$font-size: 6em;
+
+body {
+    background-image: url("../img/gray_bg.jpg");
+    font-family: "Ubuntu Regular";
+}
+
+.contentbox {
+    border: 1px solid gray;
+    padding:10px;
+    margin: 20px;
+    
+    #input_sentence {
+        margin: 10px;
+        font-size: 1em;
+        font-weight: 200;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+    
+    #generate_pig_latin_button {
+        font-size: 1em;
+        padding: 10px 10px;
+        background-color: #CDDC39;
+        margin: 10px;
+        border: none;
+        box-sizing: border-box;
+    }
+}
+
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Translate an English sentence into Pig-Latin</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/pigLatinGenerator.js"></script>
+</head>
+
+<body onLoad="initPigLatinGenerator()">
+    <div id="pig_latin_container">
+        <div id="input_container" class="contentbox">
+            <h2>Enter a sentence to translate:</h2>
+            <!-- Input user sentence here -->
+            <input type="text" id="input_sentence" placeholder="Enter a sentence, the app will translate into Pig-Latin..." size="70">
+            <input type="button" id="generate_pig_latin_button" value="Translate">
+        </div>
+        <div id="output_container" class="contentbox">
+            <h2>Pig Latin Version:</h2>
+            <!-- Output pig latin here -->
+            <div id="pig_latin_output"></div>
+        </div>
+    </div>
+</body>
+
+</html>
