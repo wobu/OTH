@@ -1,0 +1,61 @@
+%SIGNAL
+PIN   1 =  Clk 
+PIN  14 =  Green 
+PIN  12 =  Red 
+PIN   2 =  T 
+PIN  13 =  Yellow 
+PIN   3 =  reset 
+PIN  15 =  z0 
+PIN  16 =  z1 
+PIN  17 =  z2 
+PIN  18 =  z3 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+Green =>
+    !z1 & z2 & !z3
+  # !z2 & !z3
+
+Red =>
+    z0 & z1 & z2 & !z3
+  # !z1 & !z2 & z3
+
+Yellow =>
+    !z0 & z1 & z2 & !z3
+  # z0 & !z1 & !z2 & z3
+
+z0.d  =>
+    T & !reset & !z0 & !z2 & !z3
+  # !reset & z0 & !z2 & !z3
+  # !reset & !z0 & z1 & z2 & !z3
+  # !reset & !z0 & !z1 & !z2 & z3
+  # T & !reset & z0 & !z1 & !z2 & z3
+
+z1.d  =>
+    !reset & !z0 & z1 & z2 & !z3
+  # !reset & z0 & !z1 & !z3
+  # T & !reset & !z0 & !z1 & z2 & !z3
+  # !reset & !z0 & !z1 & !z2 & !z3
+
+z2.d  =>
+    !reset & !z0 & z2 & !z3
+  # !reset & z0 & !z1 & z2 & !z3
+  # !reset & z1 & !z2 & !z3
+
+z3.d  =>
+    !reset & z0 & z1 & z2 & !z3
+  # !reset & !z0 & !z1 & !z2 & z3
+
+Green.oe  =>
+    1 
+
+Red.oe  =>
+    1 
+
+Yellow.oe  =>
+    1 
+
+%END

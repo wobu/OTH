@@ -1,0 +1,32 @@
+Name       Ampel;
+Partno     ATF16V8B;
+Device     G16V8;
+Date       03/10/14;
+Revision   01;
+Designer   Ich;
+Company    OTH Regensburg;
+Assembly   U0;
+Location   Regensburg;
+
+
+Pin 1 = Clk;
+Pin 2 = T;
+Pin 3 = reset;
+Pin 12 = Red;
+Pin 13 = Yellow;
+Pin 14 = Green;
+
+Pin 15 = z0;
+Pin 16 = z1;
+Pin 17 = z2;
+Pin 18 = z3;
+
+Green = z0 & !z1 & !z2 & !z3 # !z0 & !z1 & !z2 & !z3 # !z0 & z1 & !z2 & !z3 # z0 & z1 & !z2 & !z3 # !z0 & !z1 & z2 & !z3 # z0 & !z1 & z2 & !z3;
+Yellow = !z0 & z1 & z2 & !z3 # z0 & !z1 & !z2 & z3;
+Red = z0 & z1 & z2 & !z3 # !z0 & !z1 & !z2 & z3 # z0 & !z1 & !z2 & z3;
+
+
+z0.d = !reset & !z3 & !z2 & !z1 & !z0 & T # !reset & !z3 & !z2 & !z1 & z0 # !reset & !z3 & !z2 & z1 & !z0 & T # !reset & !z3 & !z2 & z1 & z0 # !reset & !z3 & z2 & z1 & !z0 # !reset & z3 & !z2 & !z1 & !z0 # !reset & z3 & !z2 & !z1 & z0 & T;
+z1.d = !reset & !z3 & z2 & z1 & !z0 # !reset & !z3 & z2 & !z1 & z0 # !reset & !z3 & z2 & !z1 & !z0 & T # !reset & !z3 & !z2 & !z1 & z0 # !reset & !z3 & !z2 & !z1 & !z0;
+z2.d = !reset & !z3 & z2 & z1 & !z0 # !reset & !z3 & z2 & !z1 & z0 # !reset & !z3 & z2 & !z1 & !z0 # !reset & !z3 & !z2 & z1 & z0 # !reset & !z3 & !z2 & z1 & !z0;
+z3.d = !reset & !z3 & z2 & z1 & z0 # !reset & z3 & !z2 & !z1 & !z0;
