@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ueb5.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Halbaddierer.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="Halbaddierer.vhf"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Halbaddierer_drc.vhf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="Ripple_Carry_16b.fdo"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="Ripple_Carry_16b.vhf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="Ripple_Carry_4b.fdo"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Ripple_Carry_4b.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="Ripple_Carry_4b.vhf"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Ripple_Carry_4b_drc.vhf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="Volladdierer.fdo"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Volladdierer.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="Volladdierer.vhf"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Volladdierer_drc.vhf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1527250640" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1527250640">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527250640" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1527250640">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527254540" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3623531230748327430" xil_pn:start_ts="1527254540">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527254543" xil_pn:in_ck="7725332913063340409" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3329597085713321916" xil_pn:start_ts="1527254540">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Halbaddierer.vhf"/>
+      <outfile xil_pn:name="Ripple_Carry_16b.vhf"/>
+      <outfile xil_pn:name="Ripple_Carry_4b.vhf"/>
+      <outfile xil_pn:name="Volladdierer.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1527254543" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5906704725809254436" xil_pn:start_ts="1527254543">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1527254543" xil_pn:in_ck="-4495583261516487023" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1527254543">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Halbaddierer.vhf"/>
+      <outfile xil_pn:name="Ripple_Carry_16b.vhf"/>
+      <outfile xil_pn:name="Ripple_Carry_4b.vhf"/>
+      <outfile xil_pn:name="Volladdierer.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1527254544" xil_pn:in_ck="-4495583261516487023" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="7256766304810292024" xil_pn:start_ts="1527254543">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Ripple_Carry_16b.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+  </transforms>
+
+</generated_project>

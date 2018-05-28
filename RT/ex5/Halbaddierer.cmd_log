@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl Halbaddierer_drc.vhf -w G:/RT/ueb5/Halbaddierer.sch 
+sch2sym -intstyle ise -family spartan3e -refsym Halbaddierer G:/RT/ueb5/Halbaddierer.sch G:/RT/ueb5/Halbaddierer.sym 

@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl Volladdierer_drc.vhf -w G:/RT/ueb5/Volladdierer.sch 
+sch2sym -intstyle ise -family spartan3e -refsym Volladdierer G:/RT/ueb5/Volladdierer.sch G:/RT/ueb5/Volladdierer.sym 

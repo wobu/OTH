@@ -1,0 +1,7 @@
+sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl Ripple_Carry_4b_drc.vhf -w G:/RT/ueb5/Ripple_Carry_4b.sch 
+sch2sym -intstyle ise -family spartan3e -refsym Ripple_Carry_4b G:/RT/ueb5/Ripple_Carry_4b.sch G:/RT/ueb5/Ripple_Carry_4b.sym 
+sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl Ripple_Carry_4b_drc.vhf -w G:/RT/ueb5/Ripple_Carry_4b.sch 
+sch2sym -intstyle ise -family spartan3e -refsym Ripple_Carry_4b G:/RT/ueb5/Ripple_Carry_4b.sch G:/RT/ueb5/Ripple_Carry_4b.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym Ripple_Carry_4b G:/RT/ueb5/Ripple_Carry_4b.sch G:/RT/ueb5/Ripple_Carry_4b.sym 
+sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl Ripple_Carry_4b_drc.vhf -w G:/RT/ueb5/Ripple_Carry_4b.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym Ripple_Carry_4b G:/RT/ueb5/Ripple_Carry_4b.sch G:/RT/ueb5/Ripple_Carry_4b.sym 

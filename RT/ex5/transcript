@@ -1,0 +1,120 @@
+# Reading C:/modeltech64_10.6c/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.6c Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do {Ripple_Carry_16b.fdo}
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:22:28 on May 25,2018
+# vcom -reportprogress 300 -explicit -93 Halbaddierer.vhf 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VCOMPONENTS
+# -- Compiling entity Halbaddierer
+# -- Compiling architecture BEHAVIORAL of Halbaddierer
+# End time: 15:22:29 on May 25,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:22:29 on May 25,2018
+# vcom -reportprogress 300 -explicit -93 Volladdierer.vhf 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VCOMPONENTS
+# -- Compiling entity Halbaddierer_MUSER_Volladdierer
+# -- Compiling architecture BEHAVIORAL of Halbaddierer_MUSER_Volladdierer
+# -- Compiling entity Volladdierer
+# -- Compiling architecture BEHAVIORAL of Volladdierer
+# End time: 15:22:29 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:22:29 on May 25,2018
+# vcom -reportprogress 300 -explicit -93 Ripple_Carry_4b.vhf 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VCOMPONENTS
+# -- Compiling entity Halbaddierer_MUSER_Ripple_Carry_4b
+# -- Compiling architecture BEHAVIORAL of Halbaddierer_MUSER_Ripple_Carry_4b
+# -- Compiling entity Volladdierer_MUSER_Ripple_Carry_4b
+# -- Compiling architecture BEHAVIORAL of Volladdierer_MUSER_Ripple_Carry_4b
+# -- Compiling entity Ripple_Carry_4b
+# -- Compiling architecture BEHAVIORAL of Ripple_Carry_4b
+# End time: 15:22:29 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:22:30 on May 25,2018
+# vcom -reportprogress 300 -explicit -93 Ripple_Carry_16b.vhf 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VCOMPONENTS
+# -- Compiling entity Halbaddierer_MUSER_Ripple_Carry_16b
+# -- Compiling architecture BEHAVIORAL of Halbaddierer_MUSER_Ripple_Carry_16b
+# -- Compiling entity Volladdierer_MUSER_Ripple_Carry_16b
+# -- Compiling architecture BEHAVIORAL of Volladdierer_MUSER_Ripple_Carry_16b
+# -- Compiling entity Ripple_Carry_4b_MUSER_Ripple_Carry_16b
+# -- Compiling architecture BEHAVIORAL of Ripple_Carry_4b_MUSER_Ripple_Carry_16b
+# -- Compiling entity Ripple_Carry_16b
+# -- Compiling architecture BEHAVIORAL of Ripple_Carry_16b
+# End time: 15:22:30 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work work.Ripple_Carry_16b 
+# Start time: 15:22:30 on May 25,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic## End time: 15:29:49 on May 25,2018, Elapsed time: 0:21:21
+# Errors: 0, Warnings: 0
+work.ripple_carry_16b(behavioral)#1
+# Loading work.ripple_carry_4b_muser_ripple_carry_16b(behavioral)#1
+# Loading work.volladdierer_muser_ripple_carry_16b(behavioral)#1
+# Loading work.halbaddierer_muser_ripple_carry_16b(behavioral)#1
+# Loading unisim.and2(and2_v)#1
+# Loading unisim.xor2(xor2_v)#1
+# Loading unisim.or2(or2_v)#1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: sps48257  Hostname: IM-LAN-184  ProcessID: 11100
+#           Attempting to use alternate WLF file "./wlftabnx0j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftabnx0j
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do G:/RT/ueb5/RippleCarry16_test.do
+# ** Note: (vsim-8009) Loading exis# End time: 15:29:51 on May 25,2018, Elapsed time: 0:40:22
+# Errors: 2, Warnings: 0
+rry_4b/in1' not found.
+# Error in macro G:\RT\ueb5\RippleCarry16_test.do line 2
+# ** Error (suppressible): (vsim-4008) Object '/ripple_carry_4b/in1' not found.
+# 
+#     while executing
+# "force /ripple_carry_4b/in1 10#0 0, 10#0 100, 10#10 200, 10#20000 300, 10#40000 400, 10#40000 500"
+run
+run
+do G:/RT/ueb5/RippleCarry16_test.do
+# ** Note: (vsim-8009) Loading existing optimized design _opt3
+run
+run
+run
+run
+run
+run
+run
+# End time: 15:29:09 on May 25,2018, Elapsed time: 0:06:39
+# Errors: 1, Warnings: 0

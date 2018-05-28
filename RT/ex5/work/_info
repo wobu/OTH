@@ -1,0 +1,479 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/RT/ueb5
+T_opt
+!s110 1527253836
+VFGHSYVL1=NNPnR_YKEfXQ1
+Z1 04 15 10 work ripple_carry_4b behavioral 1
+=1-d89ef317e371-5b080b4b-37d-195c
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;10.6c;65
+R0
+T_opt1
+!s110 1527252570
+VB>?k]@D^WM6SHHL__0mV^0
+R1
+=1-d89ef317e371-5b080659-2a1-2b5c
+R2
+R3
+n@_opt1
+R4
+R0
+T_opt2
+!s110 1527253709
+Vbe[0hO:jC=2eQD`kIahG80
+R1
+=1-d89ef317e371-5b080acc-348-54c
+R2
+R3
+n@_opt2
+R4
+R0
+T_opt3
+Z5 !s110 1527254550
+VVFM6hVNm_AbNTGVSJdQzK3
+04 16 10 work ripple_carry_16b behavioral 1
+=1-d89ef317e371-5b080e16-20b-36ac
+R2
+R3
+n@_opt3
+R4
+Ehalbaddierer
+Z6 w1527250641
+Z7 DPx6 unisim 11 vcomponents 0 22 YLP1o]T?CY?Wf2_YhIXeW2
+Z8 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z9 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z10 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z11 8Halbaddierer.vhf
+Z12 FHalbaddierer.vhf
+l0
+L28
+Vk6<d1P9HF8A2<H0TecAlJ1
+!s100 072=R[TJS=]YFZ_1NTOfR1
+Z13 OL;C;10.6c;65
+31
+Z14 !s110 1527254549
+!i10b 1
+Z15 !s108 1527254548.000000
+Z16 !s90 -reportprogress|300|-explicit|-93|Halbaddierer.vhf|
+Z17 !s107 Halbaddierer.vhf|
+!i113 0
+Z18 o-explicit -93
+Z19 tExplicit 1 CvgOpt 0
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 12 halbaddierer 0 22 k6<d1P9HF8A2<H0TecAlJ1
+l51
+L35
+VOEYjBSA^KSgM;dg:6>YzR3
+!s100 ]PNcP]gL^ZU968VXXjPKh1
+R13
+31
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R18
+R19
+Ehalbaddierer_muser_ripple_carry_16b
+Z20 w1527254542
+R7
+R8
+R9
+R10
+R0
+Z21 8Ripple_Carry_16b.vhf
+Z22 FRipple_Carry_16b.vhf
+l0
+L28
+VzZU2A8hdVM9jXY>o83[fl1
+!s100 QkD1OXDcKYz>VT9X?himn1
+R13
+31
+R5
+!i10b 1
+Z23 !s108 1527254550.000000
+Z24 !s90 -reportprogress|300|-explicit|-93|Ripple_Carry_16b.vhf|
+Z25 !s107 Ripple_Carry_16b.vhf|
+!i113 0
+R18
+R19
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 35 halbaddierer_muser_ripple_carry_16b 0 22 zZU2A8hdVM9jXY>o83[fl1
+l51
+L35
+VzNjMz^A_z^V?N[l[5kP]n1
+!s100 bn_^GQ`G3C>P4FWj:_5k93
+R13
+31
+R5
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R18
+R19
+Ehalbaddierer_muser_ripple_carry_4b
+Z26 w1527253828
+R7
+R8
+R9
+R10
+R0
+Z27 8Ripple_Carry_4b.vhf
+Z28 FRipple_Carry_4b.vhf
+l0
+L28
+VldXZnL8@Gf:B=fK3me_IC0
+!s100 gQ;MnjfEn3GzN54Yh<11C2
+R13
+31
+R14
+!i10b 1
+Z29 !s108 1527254549.000000
+Z30 !s90 -reportprogress|300|-explicit|-93|Ripple_Carry_4b.vhf|
+Z31 !s107 Ripple_Carry_4b.vhf|
+!i113 0
+R18
+R19
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 34 halbaddierer_muser_ripple_carry_4b 0 22 ldXZnL8@Gf:B=fK3me_IC0
+l51
+L35
+V`H0^o3iOaL;[?h646nf`l2
+!s100 _MYoMf:dDJS<n_m:FWk[L1
+R13
+31
+R14
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R18
+R19
+Ehalbaddierer_muser_volladdierer
+R6
+R7
+R8
+R9
+R10
+R0
+Z32 8Volladdierer.vhf
+Z33 FVolladdierer.vhf
+l0
+L28
+VKD6N6_KoQE8UBhQG=a2630
+!s100 BXc]^z?oBd6F[l3D6b3VE3
+R13
+31
+R14
+!i10b 1
+R29
+Z34 !s90 -reportprogress|300|-explicit|-93|Volladdierer.vhf|
+Z35 !s107 Volladdierer.vhf|
+!i113 0
+R18
+R19
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 31 halbaddierer_muser_volladdierer 0 22 KD6N6_KoQE8UBhQG=a2630
+l51
+L35
+V`Qh2cGSeb]hoP[:mSiESg1
+!s100 `2OPljEEkkO<g9QhljVka1
+R13
+31
+R14
+!i10b 1
+R29
+R34
+R35
+!i113 0
+R18
+R19
+Eripple_carry_16b
+R20
+R7
+R8
+R9
+R10
+R0
+R21
+R22
+l0
+L186
+V[oTbZRLk[Q?HXFH<fT_8R1
+!s100 [711N_]W^TIbg<Z61ki=H0
+R13
+31
+R5
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R18
+R19
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 16 ripple_carry_16b 0 22 [oTbZRLk[Q?HXFH<fT_8R1
+l206
+L194
+V3Q[>4=7gn=G0PZFo6zUQB2
+!s100 A`TiZNAYkY<z2]=Pb^CoF2
+R13
+31
+R5
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R18
+R19
+Eripple_carry_4b
+R26
+R7
+R8
+R9
+R10
+R0
+R27
+R28
+l0
+L127
+Vb^jXX<RWh?_52P^oLPggl0
+!s100 zhcbV4BMc=:TZg_d@dD6i1
+R13
+31
+R14
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R18
+R19
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 15 ripple_carry_4b 0 22 b^jXX<RWh?_52P^oLPggl0
+l147
+L135
+V7odN8QM9kCW_fW5cS1oR@2
+!s100 Z@gm=L7Vc0gT;ZAIEnWA;2
+R13
+31
+R14
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R18
+R19
+Eripple_carry_4b_muser_ripple_carry_16b
+R20
+R7
+R8
+R9
+R10
+R0
+R21
+R22
+l0
+L127
+VU`ADGUzF0gTXD=_o77bYH2
+!s100 d_Z43@`T`2X`FbUS^>f?30
+R13
+31
+R5
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R18
+R19
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 38 ripple_carry_4b_muser_ripple_carry_16b 0 22 U`ADGUzF0gTXD=_o77bYH2
+l147
+L135
+Vj7P]B@<8W9W:P1lQ5gY@o1
+!s100 KYF@a<8BB:G@?n5OESKbo2
+R13
+31
+R5
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R18
+R19
+Evolladdierer
+R6
+R7
+R8
+R9
+R10
+R0
+R32
+R33
+l0
+L72
+VkV[c]MD^18Qg_G@cHj]ck2
+!s100 7noYLkR3Gnl313::2F=Q02
+R13
+31
+R14
+!i10b 1
+R29
+R34
+R35
+!i113 0
+R18
+R19
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 12 volladdierer 0 22 kV[c]MD^18Qg_G@cHj]ck2
+l99
+L80
+V6Z0SSX=8cA:eF>BIXN>Nb3
+!s100 _@_7GezhEHF25SRgEJTYS2
+R13
+31
+R14
+!i10b 1
+R29
+R34
+R35
+!i113 0
+R18
+R19
+Evolladdierer_muser_ripple_carry_16b
+R20
+R7
+R8
+R9
+R10
+R0
+R21
+R22
+l0
+L72
+VSDC`=c1N_FDgm0h9L9PXc0
+!s100 M9bmS[RzRgQaKNSI>5NaA3
+R13
+31
+R5
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R18
+R19
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 35 volladdierer_muser_ripple_carry_16b 0 22 SDC`=c1N_FDgm0h9L9PXc0
+l99
+L80
+VeVIlBz]IYj@gTdRk;m<RP3
+!s100 GfPCZZ8Z7R>dM2L6RCFjd2
+R13
+31
+R5
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R18
+R19
+Evolladdierer_muser_ripple_carry_4b
+R26
+R7
+R8
+R9
+R10
+R0
+R27
+R28
+l0
+L72
+VH_KX]MELfmbl11zZ=Z3To3
+!s100 o^j76VHzE8kJBE?malM?U0
+R13
+31
+R14
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R18
+R19
+Abehavioral
+R7
+R8
+R9
+R10
+DEx4 work 34 volladdierer_muser_ripple_carry_4b 0 22 H_KX]MELfmbl11zZ=Z3To3
+l99
+L80
+V398P7<OZiR2j@W8=Wei;I1
+!s100 <6lbcc0[6dgW`7`XC[IV93
+R13
+31
+R14
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R18
+R19
