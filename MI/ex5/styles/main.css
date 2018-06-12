@@ -1,0 +1,42 @@
+/* font configurations */
+@font-face {
+  font-family: Ubuntu Regular;
+  src: url("../fonts/Ubuntu-R.ttf");
+}
+
+body {
+  background-image: url("../img/bmi_bg.jpg");
+  font-family: "Ubuntu Regular";
+}
+
+#bmi_calc_container {
+  width: 60%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.bmi_input_container, #bmi_result_container {
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 20px;
+  float: right;
+  width: 30%;
+}
+
+.bmi_input_container input, #bmi_result_container input {
+  font-size: 6em;
+  text-align: center;
+  background: none;
+  border: none;
+}
+
+#bmi_result_container {
+  clear: both;
+  width: 100%;
+  border: 3px dotted gray;
+}
+
+#bmi_result_container div {
+  font-size: 6em;
+}
+/*# sourceMappingURL=main.css.map */

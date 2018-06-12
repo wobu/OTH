@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Berechnen Sie Ihren BMI</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/bmiCalculator.js"></script>
+</head>
+
+<body onLoad="initBMICalculator()">
+    <div id="bmi_calc_container">
+        <div class="bmi_input_container">
+            <h2>2. Gewicht</h2>
+            <input type="text" id="input_field_weight" size="3" placeholder="0"/>
+            <h3>in kg</h3>
+        </div>
+        <div class="bmi_input_container">
+            <h2>1. Körpergröße</h2>
+            <input type="text" id="input_field_height" size="3" placeholder="0"/>
+            <h3>in cm</h3>
+        </div>
+        <div id="bmi_result_container">
+            <h2>Das ist Ihr BMI</h2>
+            <div id="bmi_result_value">0</div>
+            <p id="bmi_result_text"></p>
+        </div>
+    </div>
+</body>
+
+</html>
