@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mensa-App</title>
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <script src="js/lib/jquery-2.1.4.js"></script>
+    <script src="js/MensaApp.js"></script>
+</head>
+
+<body onload="initMensaApp()">
+    <header>Mensa App</header>
+    <content>
+        <div id="day_selection">
+            <input id="get_monday_button" type="button" value="Montag" />
+            <input id="get_tuesday_button" type="button" value="Dienstag" />
+            <input id="get_wednesday_button" type="button" value="Mittwoch" />
+            <input id="get_thursday_button" type="button" value="Donnerstag" />
+            <input id="get_friday_button" type="button" value="Freitag" />
+        </div>
+        <div>
+            <ul id="mensa_results"></ul>
+        </div>
+    </content>
+</body>
+
+</html>
