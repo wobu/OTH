@@ -1,0 +1,2 @@
+vhdtdtfi -lib work ../VHDLBauteile_Datenpfad/mem32x6.vhd -prj BCD_check_register -o mem32x6.spl -module mem32x6 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e mem32x6.spl G:/OTH/RT/ex6/BCD_check_memory/mem32x6.sym 

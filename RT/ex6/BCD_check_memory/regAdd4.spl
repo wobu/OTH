@@ -1,0 +1,8 @@
+[Inputs]
+CLK
+WE
+RESET
+=DataIn[3:0]=
+[Outputs]
+=DataOut[3:0]=
+[BiDir]

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work ../VHDLBauteile_Datenpfad/reg8.vhd -prj BCD_check_register -o reg8.spl -module reg8 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w reg8.spl G:/OTH/RT/ex6/BCD_check_memory/reg8.sym 

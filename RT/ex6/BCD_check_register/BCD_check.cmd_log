@@ -1,0 +1,4 @@
+vhdtdtfi -lib work ../ex6_BCD_Check_Moore.vhd -prj BCD_check_register -o BCD_check.spl -module BCD_check -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e BCD_check.spl G:/OTH/RT/ex6/BCD_check_register/BCD_check.sym 
+vhdtdtfi -lib work ../ex6_BCD_Check_Moore.vhd -prj BCD_check_register -o BCD_check.spl -module BCD_check -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e BCD_check.spl G:/OTH/RT/ex6/BCD_check_register/BCD_check.sym 

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work ../VHDLBauteile_Datenpfad/regAdd4.vhd -prj BCD_check_register -o regAdd4.spl -module regAdd4 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e regAdd4.spl G:/OTH/RT/ex6/BCD_check_register/regAdd4.sym 

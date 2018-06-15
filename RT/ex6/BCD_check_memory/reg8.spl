@@ -1,0 +1,6 @@
+[Inputs]
+CLK
+=DataIn[7:0]=
+[Outputs]
+=DataOut[7:0]=
+[BiDir]

@@ -1,0 +1,41 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : BCD_check_simple.vf
+// /___/   /\     Timestamp : 06/08/2018 13:50:20
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog G:/OTH/RT/ex6/BCD_check_simple/BCD_check_simple.vf -w G:/OTH/RT/ex6/BCD_check_simple/BCD_check_simple.sch
+//Design Name: BCD_check_simple
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module BCD_check_simple(a, 
+                        clk, 
+                        rst_n, 
+                        counter, 
+                        valid);
+
+    input a;
+    input clk;
+    input rst_n;
+   output counter;
+   output valid;
+   
+   
+   BCD_check  XLXI_2 (.a(a), 
+                     .clk(clk), 
+                     .rst_n(rst_n), 
+                     .counter(counter), 
+                     .valid(valid));
+endmodule

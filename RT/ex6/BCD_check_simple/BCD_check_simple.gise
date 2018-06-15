@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="BCD_check_simple.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="BCD_check.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="BCD_check.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="BCD_check_simple.fdo"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="BCD_check_simple.vf"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="ex6_Moore.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ex6_Moore.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1528457935" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1528457935">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1528460751" xil_pn:in_ck="4096777759421970804" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1528460751">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../ex6_BCD_Check_Moore.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1528457935" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8636271758066396001" xil_pn:start_ts="1528457935">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1528458621" xil_pn:in_ck="4802971941566634427" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4173413926504954849" xil_pn:start_ts="1528458619">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="BCD_check_simple.vf"/>
+    </transform>
+    <transform xil_pn:end_ts="1528457937" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5322975669932997536" xil_pn:start_ts="1528457937">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1528460751" xil_pn:in_ck="3418719994937448525" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1528460751">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../ex6_BCD_Check_Moore.vhd"/>
+      <outfile xil_pn:name="BCD_check_simple.vf"/>
+    </transform>
+    <transform xil_pn:end_ts="1528460752" xil_pn:in_ck="3418719994937448525" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-9217842166928089438" xil_pn:start_ts="1528460751">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="BCD_check_simple.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+  </transforms>
+
+</generated_project>

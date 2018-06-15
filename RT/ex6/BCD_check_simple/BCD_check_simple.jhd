@@ -1,0 +1,3 @@
+MODULE BCD_check_simple
+	SUBMODULE BCD_check
+		INSTANCE XLXI_2

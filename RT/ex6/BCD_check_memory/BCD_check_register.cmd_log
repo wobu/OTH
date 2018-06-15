@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan3e -refsym BCD_check_register G:/OTH/RT/ex6/BCD_check_memory/BCD_check_register.sch G:/OTH/RT/ex6/BCD_check_memory/BCD_check_register.sym 
+sch2sym -intstyle ise -family spartan3e -refsym BCD_check_register G:/OTH/RT/ex6/BCD_check_memory/BCD_check_register.sch G:/OTH/RT/ex6/BCD_check_memory/BCD_check_register.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym BCD_check_register G:/OTH/RT/ex6/BCD_check_memory/BCD_check_register.sch G:/OTH/RT/ex6/BCD_check_memory/BCD_check_register.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym BCD_check_register G:/OTH/RT/ex6/BCD_check_memory/BCD_check_register.sch G:/OTH/RT/ex6/BCD_check_memory/BCD_check_register.sym 

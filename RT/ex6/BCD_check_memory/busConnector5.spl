@@ -1,0 +1,5 @@
+[Inputs]
+=DataIn[4:0]=
+[Outputs]
+=DataOut[4:0]=
+[BiDir]

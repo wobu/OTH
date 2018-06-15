@@ -1,0 +1,8 @@
+[Inputs]
+clk
+rst_n
+a
+[Outputs]
+valid
+counter
+[BiDir]

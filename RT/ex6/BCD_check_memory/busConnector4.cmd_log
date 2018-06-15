@@ -1,0 +1,4 @@
+vhdtdtfi -lib work ../VHDLBauteile_Datenpfad/busConnector4.vhd -prj BCD_check_register -o busConnector4.spl -module busConnector4 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e busConnector4.spl G:/OTH/RT/ex6/BCD_check_register/busConnector4.sym 
+vhdtdtfi -lib work ../VHDLBauteile_Datenpfad/busConnector4.vhd -prj BCD_check_register -o busConnector4.spl -module busConnector4 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e busConnector4.spl G:/OTH/RT/ex6/BCD_check_memory/busConnector4.sym 

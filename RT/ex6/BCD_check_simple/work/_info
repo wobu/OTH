@@ -1,0 +1,152 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/OTH/RT/ex6/BCD_check_simple
+T_opt
+!s110 1528460834
+V^zLeGOX2GJljjd;6YB9S60
+Z1 04 16 4 work BCD_check_simple fast 0
+Z2 04 4 4 work glbl fast 0
+=2-d89ef317e110-5b1a7622-1d9-237c
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;10.6c;65
+T_opt1
+!s110 1528460758
+VOMZJkZac8DM6:5<R[@P440
+R1
+R2
+=1-d89ef317e110-5b1a75d5-172-237c
+R3
+R4
+n@_opt1
+R5
+R0
+Ebcd_check
+Z6 w1528460723
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z9 8../ex6_BCD_Check_Moore.vhd
+Z10 F../ex6_BCD_Check_Moore.vhd
+l0
+L26
+VJ1Y6kS3G>@WWgB_3P_5_P1
+!s100 2H;9keK4Cj]lnzkHP:efn3
+Z11 OL;C;10.6c;65
+31
+Z12 !s110 1528460756
+!i10b 1
+Z13 !s108 1528460756.000000
+Z14 !s90 -reportprogress|300|-explicit|-93|../ex6_BCD_Check_Moore.vhd|
+Z15 !s107 ../ex6_BCD_Check_Moore.vhd|
+!i113 0
+Z16 o-explicit -93
+Z17 tExplicit 1 CvgOpt 0
+Abehave
+R7
+R8
+DEx4 work 9 bcd_check 0 22 J1Y6kS3G>@WWgB_3P_5_P1
+l39
+L34
+V_R_8UR]Ldz1Dg5N]<Ue161
+!s100 [iaLcKXOL6k9k[_B>XB:20
+R11
+31
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+vBCD_check_simple
+R12
+!i10b 1
+!s100 ZoO1>IOee]J6ZVzzBngTN2
+I2@9`e>@K^>NCQhPRTbNP?1
+Z18 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1528458620
+8BCD_check_simple.vf
+FBCD_check_simple.vf
+L0 23
+Z19 OL;L;10.6c;65
+r1
+!s85 0
+31
+R13
+!s107 BCD_check_simple.vf|
+!s90 -reportprogress|300|BCD_check_simple.vf|
+!i113 0
+Z20 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@b@c@d_check_simple
+Eex6_moore
+Z21 w1527490637
+R7
+R8
+R0
+R9
+R10
+l0
+L26
+V7U=j@W@2_PEdXiKkcUV=P1
+!s100 @Q69meP2`ZB118fD0miMj2
+R11
+31
+Z22 !s110 1528457943
+!i10b 1
+Z23 !s108 1528457943.000000
+R14
+R15
+!i113 0
+R16
+R17
+Abehave
+R7
+R8
+DEx4 work 9 ex6_moore 0 22 7U=j@W@2_PEdXiKkcUV=P1
+l39
+L34
+V6Vczz7QkBd3?a4;iNH_5I1
+!s100 82UOag7737^mJHdh1K6NN0
+R11
+31
+R22
+!i10b 1
+R23
+R14
+R15
+!i113 0
+R16
+R17
+vglbl
+!s110 1528460757
+!i10b 1
+!s100 UlJ]9LUWO:ZWoRO62F9fW3
+INz3046GECC=X7FgQ2]FR>3
+R18
+R0
+w1381681120
+8C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+FC:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+L0 5
+R19
+r1
+!s85 0
+31
+R13
+!s107 C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!s90 -reportprogress|300|C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i113 0
+R20
+R4

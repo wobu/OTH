@@ -1,0 +1,2 @@
+vhdtdtfi -lib work ../ex6_BCD_Check_Moore.vhd -prj BCD_check_simple -o ex6_Moore.spl -module ex6_Moore -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ex6_Moore.spl G:/OTH/RT/ex6/BCD_check_simple/ex6_Moore.sym 

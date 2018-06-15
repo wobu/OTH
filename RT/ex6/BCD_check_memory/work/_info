@@ -1,0 +1,334 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/OTH/RT/ex6/BCD_check_register
+T_opt
+!s110 1528461802
+V]>iPmCS<>FJ<oEJBXb>Ao0
+Z1 04 18 4 work BCD_check_register fast 0
+Z2 04 4 4 work glbl fast 0
+=1-d89ef317e110-5b1a79e9-123-5a8
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;10.6c;65
+R0
+T_opt1
+!s110 1529063952
+VZKFE3VO0f=1Od>^HiH7QI3
+R1
+R2
+=1-d89ef317e38a-5b23aa0f-2ea-37c0
+R3
+R4
+n@_opt1
+R5
+R0
+T_opt2
+!s110 1529063989
+Vd2XBc4e@^VondVKZ^ekbN3
+R1
+R2
+=1-d89ef317e38a-5b23aa34-31f-15e0
+R3
+R4
+n@_opt2
+R5
+R0
+T_opt3
+!s110 1529065957
+V30g^z`ocF1?@[mCfaOFIS3
+R1
+R2
+=1-d89ef317e38a-5b23b1e4-2d2-266c
+R3
+R4
+n@_opt3
+R5
+Ebcd_check
+Z6 w1528461021
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z9 8../ex6_BCD_Check_Moore.vhd
+Z10 F../ex6_BCD_Check_Moore.vhd
+l0
+L26
+VJ1Y6kS3G>@WWgB_3P_5_P1
+!s100 2H;9keK4Cj]lnzkHP:efn3
+Z11 OL;C;10.6c;65
+31
+Z12 !s110 1528461800
+!i10b 1
+Z13 !s108 1528461800.000000
+Z14 !s90 -reportprogress|300|-explicit|-93|../ex6_BCD_Check_Moore.vhd|
+Z15 !s107 ../ex6_BCD_Check_Moore.vhd|
+!i113 0
+Z16 o-explicit -93
+Z17 tExplicit 1 CvgOpt 0
+Abehave
+R7
+R8
+DEx4 work 9 bcd_check 0 22 J1Y6kS3G>@WWgB_3P_5_P1
+l39
+L34
+V48F1FXMRBm^?EKBI8k<bf2
+!s100 kaQ:O20YeHa<J=RAXl30@3
+R11
+31
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+vBCD_check_register
+Z18 !s110 1529065956
+!i10b 1
+!s100 bB4dZAmU1VdX;?QMjb5;W0
+Ihi=@NXE<ZKn2<AIYP?8i?2
+Z19 VDg1SIo80bB@j0V0VzS_@n1
+Z20 dG:/OTH/RT/ex6/BCD_check_memory
+w1529065949
+8BCD_check_register.vf
+FBCD_check_register.vf
+L0 23
+Z21 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z22 !s108 1529065956.000000
+!s107 BCD_check_register.vf|
+!s90 -reportprogress|300|BCD_check_register.vf|
+!i113 0
+Z23 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@b@c@d_check_register
+Ebusconnector4
+Z24 w1306256907
+R7
+R8
+R20
+Z25 8../VHDLBauteile_Datenpfad/busConnector4.vhd
+Z26 F../VHDLBauteile_Datenpfad/busConnector4.vhd
+l0
+L32
+VbYTDF6c8W9cIY^[_X`09S3
+!s100 Z5PPX9mSX7J]9_VY48@4M1
+R11
+31
+Z27 !s110 1529065955
+!i10b 1
+Z28 !s108 1529065955.000000
+Z29 !s90 -reportprogress|300|-explicit|-93|../VHDLBauteile_Datenpfad/busConnector4.vhd|
+Z30 !s107 ../VHDLBauteile_Datenpfad/busConnector4.vhd|
+!i113 0
+R16
+R17
+Abehavioral
+R7
+R8
+DEx4 work 13 busconnector4 0 22 bYTDF6c8W9cIY^[_X`09S3
+l39
+L37
+VlWf?[Rc9B2KBLgaJab_c@1
+!s100 an??1EP]QQ>6SKghPVeXo1
+R11
+31
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 0
+R16
+R17
+vglbl
+R18
+!i10b 1
+!s100 UlJ]9LUWO:ZWoRO62F9fW3
+INz3046GECC=X7FgQ2]FR>3
+R19
+R20
+w1381681120
+8C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+FC:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+L0 5
+R21
+r1
+!s85 0
+31
+R22
+!s107 C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!s90 -reportprogress|300|C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i113 0
+R23
+R4
+Emem32x6
+Z31 w1371060413
+Z32 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R7
+R8
+R20
+Z33 8mem32x6.vhd
+Z34 Fmem32x6.vhd
+l0
+L33
+V1GXCeoIX<h^B6923B41?P1
+!s100 FbkV5mEokN93WN1_74df?2
+R11
+31
+R18
+!i10b 1
+R28
+Z35 !s90 -reportprogress|300|-explicit|-93|mem32x6.vhd|
+Z36 !s107 mem32x6.vhd|
+!i113 0
+R16
+R17
+Abehavioral
+R32
+R7
+R8
+DEx4 work 7 mem32x6 0 22 1GXCeoIX<h^B6923B41?P1
+l44
+L39
+VNgSEIE]Vz??92@[ZaU9=63
+!s100 0PD[BLcU_Ydz=hCAW<@oT1
+R11
+31
+R18
+!i10b 1
+R28
+R35
+R36
+!i113 0
+R16
+R17
+Ereg4
+Z37 w1306146535
+R7
+R8
+R20
+Z38 8../VHDLBauteile_Datenpfad/reg4.vhd
+Z39 F../VHDLBauteile_Datenpfad/reg4.vhd
+l0
+L33
+VJ2VI1aLdk8[jFPkBUKT`O2
+!s100 M;0@CMQY:ge=jg3Bgd^KE0
+R11
+31
+Z40 !s110 1529063683
+!i10b 1
+Z41 !s108 1529063683.000000
+Z42 !s90 -reportprogress|300|-explicit|-93|../VHDLBauteile_Datenpfad/reg4.vhd|
+Z43 !s107 ../VHDLBauteile_Datenpfad/reg4.vhd|
+!i113 0
+R16
+R17
+Abehavioral
+R7
+R8
+DEx4 work 4 reg4 0 22 J2VI1aLdk8[jFPkBUKT`O2
+l41
+L39
+V]DZ?BT8BMmR0Ffhhee>_F2
+!s100 2F=he4kV4E:aTBm1b;1o91
+R11
+31
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 0
+R16
+R17
+Ereg8
+Z44 w1306147826
+R7
+R8
+R20
+Z45 8../VHDLBauteile_Datenpfad/reg8.vhd
+Z46 F../VHDLBauteile_Datenpfad/reg8.vhd
+l0
+L33
+V5F396Onak>?MRdILLOKNE2
+!s100 69GH;5IV16T>aakah7CJH2
+R11
+31
+R27
+!i10b 1
+R28
+Z47 !s90 -reportprogress|300|-explicit|-93|../VHDLBauteile_Datenpfad/reg8.vhd|
+Z48 !s107 ../VHDLBauteile_Datenpfad/reg8.vhd|
+!i113 0
+R16
+R17
+Abehavioral
+R7
+R8
+DEx4 work 4 reg8 0 22 5F396Onak>?MRdILLOKNE2
+l41
+L39
+VBe<??SI9oiUSC]Xg?Y=?H2
+!s100 K95[>nW9VG6Q]TU:mo@W:0
+R11
+31
+R27
+!i10b 1
+R28
+R47
+R48
+!i113 0
+R16
+R17
+Eregadd4
+Z49 w1306219944
+Z50 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R7
+R8
+R20
+Z51 8../VHDLBauteile_Datenpfad/regAdd4.vhd
+Z52 F../VHDLBauteile_Datenpfad/regAdd4.vhd
+l0
+L33
+VMj34J`E``O>T]WKS?VDUP2
+!s100 dH;Vj3BKQGk5FFe7H5c<03
+R11
+31
+R27
+!i10b 1
+R28
+Z53 !s90 -reportprogress|300|-explicit|-93|../VHDLBauteile_Datenpfad/regAdd4.vhd|
+Z54 !s107 ../VHDLBauteile_Datenpfad/regAdd4.vhd|
+!i113 0
+R16
+R17
+Abehavioral
+R50
+R7
+R8
+DEx4 work 7 regadd4 0 22 Mj34J`E``O>T]WKS?VDUP2
+l45
+L41
+VF434]^MFY6B_C_O[AEhn>3
+!s100 ine28H>Ac@RCH7D?bk47J2
+R11
+31
+R27
+!i10b 1
+R28
+R53
+R54
+!i113 0
+R16
+R17

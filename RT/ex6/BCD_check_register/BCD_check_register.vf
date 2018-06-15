@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : BCD_check_register.vf
+// /___/   /\     Timestamp : 06/08/2018 14:43:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog G:/OTH/RT/ex6/BCD_check_register/BCD_check_register.vf -w G:/OTH/RT/ex6/BCD_check_register/BCD_check_register.sch
+//Design Name: BCD_check_register
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module BCD_check_register(a, 
+                          clk, 
+                          rst_n, 
+                          counter, 
+                          valid);
+
+    input a;
+    input clk;
+    input rst_n;
+   output counter;
+   output valid;
+   
+   wire [3:0] InvalidCounter;
+   wire [3:0] ValidCounter;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_30;
+   wire valid_DUMMY;
+   wire counter_DUMMY;
+   
+   assign counter = counter_DUMMY;
+   assign valid = valid_DUMMY;
+   BCD_check  XLXI_1 (.a(a), 
+                     .clk(clk), 
+                     .rst_n(rst_n), 
+                     .counter(counter_DUMMY), 
+                     .valid(valid_DUMMY));
+   regAdd4  XLXI_2 (.CLK(clk), 
+                   .DataIn(ValidCounter[3:0]), 
+                   .RESET(XLXN_30), 
+                   .WE(XLXN_10), 
+                   .DataOut(ValidCounter[3:0]));
+   regAdd4  XLXI_3 (.CLK(clk), 
+                   .DataIn(InvalidCounter[3:0]), 
+                   .RESET(XLXN_30), 
+                   .WE(XLXN_11), 
+                   .DataOut(InvalidCounter[3:0]));
+   AND2  XLXI_4 (.I0(counter_DUMMY), 
+                .I1(valid_DUMMY), 
+                .O(XLXN_10));
+   XOR2  XLXI_5 (.I0(counter_DUMMY), 
+                .I1(valid_DUMMY), 
+                .O(XLXN_11));
+   INV  XLXI_8 (.I(rst_n), 
+               .O(XLXN_30));
+endmodule
