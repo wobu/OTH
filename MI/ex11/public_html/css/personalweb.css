@@ -1,0 +1,54 @@
+/* font configurations */
+@font-face {
+    font-family: Roboto Condensed Light;
+    src: url("../fonts/RobotoCondensed-Light.ttf"); 
+}
+
+/* Basic Styles */
+body {
+    font-family: 'Roboto Condensed Light';
+    background: #f0f0f0;
+}
+
+#header {
+    background-color: #c2185b;
+    height: 80px;
+    color: white;
+    padding: 20px;
+}
+
+#hobbies {
+    background-color: white;
+    float:left;
+    width:45%;
+    margin-top:10px;
+    padding:10px;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+#about_me {
+    background-color: white;
+    float:right;
+    width:45%;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:10px;
+}
+
+#about_me img {
+    margin: 1%;
+    border-radius: 50% 50%;
+    float: left;
+    width:30%;
+    height:auto;
+}
+
+#footer {
+    clear:both;
+    background-color: #c2185b;
+    text-align: center;
+    color: white;
+}
