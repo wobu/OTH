@@ -83,6 +83,8 @@
     <transform xil_pn:end_ts="1529065951" xil_pn:in_ck="-5438309310754441826" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-9217842166928089438" xil_pn:start_ts="1529065950">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BCD_check_register.fdo"/>
       <outfile xil_pn:name="vsim.wlf"/>
       <outfile xil_pn:name="work"/>
