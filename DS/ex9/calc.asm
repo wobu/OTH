@@ -56,9 +56,9 @@ CMAIN:
     calc:
     PRINT_CHAR Op
     NEWLINE
-    PRINT_DEC 4, Num1
+    PRINT_UDEC 4, Num1
     NEWLINE
-    PRINT_DEC 4, Num2
+    PRINT_UDEC 4, Num2
     NEWLINE
     
     ; use 8 bit register for comparing with 8 bit char
@@ -70,20 +70,20 @@ CMAIN:
     cmp al, '-'
     je doSub
     
-    cmp al, '\'
-    je div
+    cmp al, '/'
+    je doDiv
     
     cmp al, '*'
-    je mul
+    je doMul
     
     cmp al, '%'
-    je mod
+    je doMod
     
     doAdd:    
     mov eax, [Num1]
     add eax, [Num2]
     PRINT_STRING "Result: "
-    PRINT_DEC 4, eax
+    PRINT_UDEC 4, eax
     jmp end
     
     doSub:
@@ -93,16 +93,32 @@ CMAIN:
     PRINT_DEC 4, eax
     jmp end
     
-    div:
-    ; TODO
+    doDiv:
+    mov edx, 0
+    mov eax, [Num1]
+    mov ecx, [Num2]
+    div ecx
+    PRINT_STRING "Result: "
+    PRINT_UDEC 4, eax ;quotient\
     jmp end
     
-    mul:
+    doMul:
     ; TODO
+    mov eax, [Num1]
+    mov ecx, [Num2]
+    mul ecx
+    PRINT_STRING "Result: "
+    ;PRINT_UDEC 4, edx ;higher part
+    ;PRINT_UDEC 4, eax ;lower part
     jmp end
     
-    mod:    
-    ; TODO
+    doMod:    
+    mov edx, 0
+    mov eax, [Num1]
+    mov ecx, [Num2]
+    div ecx
+    PRINT_STRING "Result: "
+    PRINT_UDEC 4, edx ;remainder
     jmp end
     
     end:
