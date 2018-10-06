@@ -188,26 +188,81 @@ namespace ex1
         {
             var random = new Random();
 
-            Console.WriteLine("Creating first Matrix [4x5]");
+            Console.WriteLine("Enter first Matrix [4x5]");
             var matrix1 = new ArrayMatrix(4, 5);
             matrix1.Input();
             matrix1.Print();
+            Console.WriteLine("");
 
-            Console.WriteLine("Creating second Matrix [4x5]");
+            Console.WriteLine("Random second Matrix [4x5]");
             var matrix2 = new ArrayMatrix(4, 5, new int[4 * 5].ToList().Select(_ => random.Next(-9, 9)).ToList());
             matrix2.Print();
+            Console.WriteLine("");
 
             Console.WriteLine("Addition of first and second Matrix [4x5]");
             var add = matrix1.Add(matrix2);
             add.Print();
+            Console.WriteLine("");
 
-            Console.WriteLine("Creating third Matrix [5x2]");
+            Console.WriteLine("Random third Matrix [5x2]");
             var matrix3 = new ArrayMatrix(5, 2, new int[5 * 2].ToList().Select(_ => random.Next(-9, 9)).ToList());
             matrix3.Print();
+            Console.WriteLine("");
 
             Console.WriteLine("Multiplication of first and third Matrix");
             var mult = matrix1.Mult(matrix3);
             mult.Print();
+            Console.WriteLine("");
+
+            Console.ReadLine();
+        }
+    }
+
+    class MatrixBenchmark
+    {
+        public static void Main()
+        {
+            var random = new Random();
+
+            var n = 100;
+            var benchmarkTimesInMinutes = new List<int> { 1, 2, 5, 10 };
+
+            var matrix = new ArrayMatrix(n, n, new int[n * n].ToList().Select(_ => random.Next(-9, 9)).ToList());
+
+
+            var startTime = DateTime.UtcNow;
+
+            var add = matrix.Add(matrix);
+
+            var elapsed = DateTime.UtcNow - startTime;
+
+            // operation count for matrix additions = n * n
+            Console.WriteLine("Benchmark results for addition");
+            foreach (int b in benchmarkTimesInMinutes)
+            {
+                var operations = n * n;
+
+                var result = Math.Sqrt(TimeSpan.FromMinutes(b).Divide(TimeSpan.FromMilliseconds(elapsed.TotalMilliseconds)) * operations);
+                Console.WriteLine($"{b} Min:\t n = {result}");
+            }
+
+            startTime = DateTime.UtcNow;
+
+            var mult = matrix.Mult(matrix);
+
+            elapsed = DateTime.UtcNow - startTime;
+
+            // operation count for matrix multiplicatoins = additions: n³ + multiplictions: n³
+            Console.WriteLine("Benchmark results for multiplication");
+            foreach (int b in benchmarkTimesInMinutes)
+            {
+                // ommitted factor 2
+                var operations = n * n * n;
+
+                var result = Math.Pow((TimeSpan.FromMinutes(b).Divide(TimeSpan.FromMilliseconds(elapsed.TotalMilliseconds)) * operations), 0.3333);
+                Console.WriteLine($"{b} Min:\t n = {result}");
+            }
+
 
             Console.ReadLine();
         }
