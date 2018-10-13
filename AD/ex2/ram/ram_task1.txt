@@ -1,0 +1,18 @@
+INP 1 # Read n
+LDK 0
+STA 2 # init result with zero
+STA 3 # init loop counter with zero
+LDK 1
+STA 4 # save constant 1
+LDA 3 # load counter
+MUL 0 # multiply with itself
+ADD 2 # add result to multiplication result
+STA 2 # save new result
+LDA 3 # load counter
+ADD 4 # counter + 1
+STA 3 # save counter - 1
+LDA 1 # load n
+SUB 3 # n - counter
+JGE 6 # loop until n = 0
+OUT 2 # print result
+HLT 99
