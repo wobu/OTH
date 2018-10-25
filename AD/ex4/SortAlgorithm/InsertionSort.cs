@@ -3,9 +3,14 @@ using System.Collections.Generic;
 
 namespace SortAlgorithm
 {
-    class InsertionSort
+    class InsertionSort : SortAlgorithm
     {
-        public static void sort(List<int> list, Action<List<int>> iterationDelegate)
+        public Action<List<int>> IterationDelegate
+        {
+            get; set;
+        } = (list) => { };
+
+        public void sort(List<int> list)
         {
             {
                 for (int j = list.Count - 2; j >= 0; j--)
@@ -21,7 +26,7 @@ namespace SortAlgorithm
 
                     list[i - 1] = key;
 
-                    iterationDelegate(list);
+                    IterationDelegate(list);
                 }
             }
         }

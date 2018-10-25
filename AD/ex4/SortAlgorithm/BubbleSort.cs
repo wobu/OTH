@@ -3,9 +3,13 @@ using System.Collections.Generic;
 
 namespace SortAlgorithm
 {
-    class BubbleSort
+    class BubbleSort: SortAlgorithm
     {
-        public static void sort(List<int> list, Action<List<int>> iterationDelegate)
+        public Action<List<int>> IterationDelegate
+        {
+            get; set;
+        } = (list) => { };
+        public void sort(List<int> list)
         {
             {
                 for (int i = (list.Count - 1); i >= 0; i--)
@@ -19,7 +23,7 @@ namespace SortAlgorithm
                             list[j + 1] = tmp;
                         }
 
-                        iterationDelegate(list);
+                        IterationDelegate(list);
                     }
                 }
             }

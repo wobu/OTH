@@ -7,25 +7,17 @@ namespace SortAlgorithm
     {
         static void Main(string[] args)
         {
-            InsertionSort.sort(
-                new List<int> { -5, 13, -32, 7, -3, 17, 23, 12, -35, 19 },
-                PrintIterationState("InsertionSort Min")
-            );
-            
-            BubbleSort.sort(
-                new List<int> { -5, 13, -32, 7, -3, 17, 23, 12, -35, 19 },
-                PrintIterationState("BubbleSort Up")
-            );
+            List<SortAlgorithm> algorithms = new List<SortAlgorithm> {
+                new InsertionSort { IterationDelegate = PrintIterationState("InsertionSort Min") },
+                new BubbleSort { IterationDelegate = PrintIterationState("BubbleSort Up") },
+                new SelectionSort { IterationDelegate = PrintIterationState("SelectionSort Max") },
+                new QuickSort { IterationDelegate = PrintIterationState("QuickSort Random Pivot") }
+            };
 
-            SelectionSort.sort(
-                new List<int> { -5, 13, -32, 7, -3, 17, 23, 12, -35, 19 },
-                PrintIterationState("SelectionSort Max")
-            );
-
-            QuickSort.sort(
-                new List<int> { -5, 13, -32, 7, -3, 17, 23, 12, -35, 19 },
-                PrintIterationState("QuickSort Random Pivot")
-            );
+            foreach (var algorithm in algorithms)
+            {
+                algorithm.sort(new List<int> { -5, 13, -32, 7, -3, 17, 23, 12, -35, 19 });
+            }
         }
 
         static Action<List<int>> PrintIterationState(string algorithm)

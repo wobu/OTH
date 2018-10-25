@@ -3,23 +3,28 @@ using System.Collections.Generic;
 
 namespace SortAlgorithm
 {
-    class QuickSort
+    class QuickSort : SortAlgorithm
     {
-        public static void sort(List<int> list, Action<List<int>> iterationDelegate)
+        public Action<List<int>> IterationDelegate
         {
-            rec_sort(list, 0, list.Count - 1, iterationDelegate);
+            get; set;
+        } = (list) => { };
+
+        public void sort(List<int> list)
+        {
+            rec_sort(list, 0, list.Count - 1);
         }
 
-        static void rec_sort(List<int> list, int f, int l, Action<List<int>> iterationDelegate)
+        void rec_sort(List<int> list, int f, int l)
         {
             if (f < l)
             {
                 int pivot = partition(list, f, l);
 
-                iterationDelegate(list);
+                IterationDelegate(list);
 
-                rec_sort(list, f, pivot - 1, iterationDelegate);
-                rec_sort(list, pivot + 1, l, iterationDelegate);
+                rec_sort(list, f, pivot - 1);
+                rec_sort(list, pivot + 1, l);
             }
         }
 
