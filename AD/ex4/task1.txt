@@ -1,0 +1,9 @@
+InsertionSort: Laufzeit und Korrektheit ändern sich nicht
+Bubblesort: Laufzeit und Korrektheit ändern sich nicht
+SelectionSort: Laufzeit und Korrektheit ändern sich nicht
+
+Da nur Vergleiche und Laufrichtung der Schleifen umgedreht wurden
+
+Quicksort: Laufzeit und Korrektheit muss geprüft werden, da implementierung sich geändert hat
+- bei Pivot = Left Index -> 9 Sortzyklen
+- bei Random Pivot -> 6 Sortzyklen
