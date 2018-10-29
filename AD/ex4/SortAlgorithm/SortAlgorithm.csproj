@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
+    <StartupObject>SortAlgorithm.Test</StartupObject>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 

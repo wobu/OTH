@@ -11,7 +11,9 @@ namespace SortAlgorithm
                 new InsertionSort { IterationDelegate = PrintIterationState("InsertionSort Min") },
                 new BubbleSort { IterationDelegate = PrintIterationState("BubbleSort Up") },
                 new SelectionSort { IterationDelegate = PrintIterationState("SelectionSort Max") },
-                new QuickSort { IterationDelegate = PrintIterationState("QuickSort Random Pivot") }
+                new QuickSort { IterationDelegate = PrintIterationState("QuickSort Random Pivot") },
+                new MergeSort { IterationDelegate = PrintIterationState("MergeSort") },
+                new HeapSort { IterationDelegate = PrintIterationState("HeapSort") }
             };
 
             foreach (var algorithm in algorithms)
