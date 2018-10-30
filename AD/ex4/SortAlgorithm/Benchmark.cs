@@ -14,9 +14,11 @@ namespace SortAlgorithm
 //                new InsertionSortMin(),
 //                new SelectionSort(),
 //                new SelectionSortMax()
-                new MergeSort(),
-                new HeapSort(),
-                new QuickSort()
+                // new MergeSort(),
+                // new MergeSortIter(),
+                // new HeapSort(),
+                new QuickSort(),
+                new QuickSortRandom()
             };
 
             int n = 100;

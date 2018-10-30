@@ -1,27 +1,58 @@
 Benchmark results in millis:
 
 Template List: 279,516,855,380,477...
-N[1000]		SortAlgorithm.BubbleSort	7	[0,0,1,3,3...]
-N[1000]		SortAlgorithm.BubbleSortUp	11	[0,0,1,3,3...]
+N[1000]		    SortAlgorithm.BubbleSort	    7	[0,0,1,3,3...]
+N[1000]		    SortAlgorithm.BubbleSortUp	    11	[0,0,1,3,3...]
 Template List: 3077,3656,2779,7349,6658...
-N[10000]	SortAlgorithm.BubbleSort	724	[0,0,4,7,8...]
-N[10000]	SortAlgorithm.BubbleSortUp	1204	[0,0,4,7,8...]
+N[10000]	    SortAlgorithm.BubbleSort	    724	[0,0,4,7,8...]
+N[10000]	    SortAlgorithm.BubbleSortUp	    1204	[0,0,4,7,8...]
 Template List: 51199,55627,57592,13471,14051...
-N[100000]	SortAlgorithm.BubbleSort	74147	[0,1,2,3,3...]
-N[100000]	SortAlgorithm.BubbleSortUp	122689	[0,1,2,3,3...]
+N[100000]	    SortAlgorithm.BubbleSort	    74147	[0,1,2,3,3...]
+N[100000]	    SortAlgorithm.BubbleSortUp	    122689	[0,1,2,3,3...]
+
 
 Template List: 56,923,250,518,468...
-N[1000]		SortAlgorithm.InsertionSort	1	[1,1,2,2,2...]
-N[1000]		SortAlgorithm.InsertionSortMin	2	[1,1,2,2,2...]
-N[1000]		SortAlgorithm.SelectionSort	2	[1,1,2,2,2...]
-N[1000]		SortAlgorithm.SelectionSortMax	2	[1,1,2,2,2...]
+N[1000]		    SortAlgorithm.InsertionSort	    1	[1,1,2,2,2...]
+N[1000]		    SortAlgorithm.InsertionSortMin	2	[1,1,2,2,2...]
+N[1000]		    SortAlgorithm.SelectionSort	    2	[1,1,2,2,2...]
+N[1000]		    SortAlgorithm.SelectionSortMax	2	[1,1,2,2,2...]
 Template List: 7142,6737,7160,9461,3087...
-N[10000]	SortAlgorithm.InsertionSort	141	[1,1,2,2,3...]
-N[10000]	SortAlgorithm.InsertionSortMin	176	[1,1,2,2,3...]
-N[10000]	SortAlgorithm.SelectionSort	244	[1,1,2,2,3...]
-N[10000]	SortAlgorithm.SelectionSortMax	192	[1,1,2,2,3...]
+N[10000]	    SortAlgorithm.InsertionSort	    141	[1,1,2,2,3...]
+N[10000]	    SortAlgorithm.InsertionSortMin	176	[1,1,2,2,3...]
+N[10000]	    SortAlgorithm.SelectionSort	    244	[1,1,2,2,3...]
+N[10000]	    SortAlgorithm.SelectionSortMax	192	[1,1,2,2,3...]
 Template List: 90663,99436,50754,34762,18565...
-N[100000]	SortAlgorithm.InsertionSort	19299	[1,2,2,3,4...]
-N[100000]	SortAlgorithm.InsertionSortMin	17316	[1,2,2,3,4...]
-N[100000]	SortAlgorithm.SelectionSort	24338	[1,2,2,3,4...]
-N[100000]	SortAlgorithm.SelectionSortMax	19105	[1,2,2,3,4...]
+N[100000]	    SortAlgorithm.InsertionSort	    19299	[1,2,2,3,4...]
+N[100000]	    SortAlgorithm.InsertionSortMin	17316	[1,2,2,3,4...]
+N[100000]	    SortAlgorithm.SelectionSort	    24338	[1,2,2,3,4...]
+N[100000]	    SortAlgorithm.SelectionSortMax	19105	[1,2,2,3,4...]
+
+
+Template List: 72108,58813,64175,309,51208...
+N[100000]	    SortAlgorithm.MergeSort	        34	[0,2,2,3,3...]
+N[100000]	    SortAlgorithm.HeapSort	        66	[0,2,2,3,3...]
+Template List: 776174,312720,248882,251799,356890...
+N[1000000]	    SortAlgorithm.MergeSort	        477	[1,1,2,3,3...]
+N[1000000]	    SortAlgorithm.HeapSort	        1354	[1,1,2,3,3...]
+Template List: 5409753,3503835,5459851,2025932,1251672...
+N[10000000]	    SortAlgorithm.MergeSort	        4508	[0,1,2,3,3...]
+N[10000000]	    SortAlgorithm.HeapSort	        12551	[0,1,2,3,3...]
+Template List: 20255112,60992687,68836936,74491162,10150714...
+N[100000000]	SortAlgorithm.MergeSort	        50949	[0,1,2,4,4...]
+N[100000000]	SortAlgorithm.HeapSort	        220640	[0,1,2,4,4...]
+Template List: 146507713,990280161,923673002,29982787,910980779...
+
+
+N[10000]	    SortAlgorithm.QuickSort	        2	[0,0,1,2,4...]
+N[10000]	    SortAlgorithm.QuickSortRandom	16	[0,0,1,2,4...]
+Template List: 78642,23550,37686,28344,37643...
+N[100000]	    SortAlgorithm.QuickSort	        35	[0,0,1,5,8...]
+N[100000]	    SortAlgorithm.QuickSortRandom	155	[0,0,1,5,8...]
+Template List: 218885,782752,231874,429414,51731...
+N[1000000]	    SortAlgorithm.QuickSort	        454	[0,1,2,2,2...]
+N[1000000]	    SortAlgorithm.QuickSortRandom	1666	[0,1,2,2,2...]
+Template List: 4143211,2887894,9877522,3317079,8936593...
+N[10000000]	    SortAlgorithm.QuickSort	        5188	[0,0,2,2,3...]
+N[10000000]	    SortAlgorithm.QuickSortRandom	19387	[0,0,2,2,3...]
+Template List: 87330089,93160062,31926281,7105366,10938239...
+N[100000000]	SortAlgorithm.QuickSort	        62429	[4,4,5,8,8...]
