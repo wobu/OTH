@@ -54,7 +54,13 @@ namespace SortAlgorithm
                 }
             }
 
-            swap(list, left, pivot);
+            if (list[left] >= pivotValue)
+            {
+                swap(list, left, right);
+                return left;
+            }
+
+
             return pivot;
         }
 
