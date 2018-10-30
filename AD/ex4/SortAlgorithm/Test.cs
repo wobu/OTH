@@ -8,11 +8,14 @@ namespace SortAlgorithm
         static void Main(string[] args)
         {
             List<SortAlgorithm> algorithms = new List<SortAlgorithm> {
-                new InsertionSort { IterationDelegate = PrintIterationState("InsertionSort Min") },
+                new InsertionSortMin { IterationDelegate = PrintIterationState("InsertionSort Min") },
+                new InsertionSort { IterationDelegate = PrintIterationState("InsertionSort") },
+                new InsertionSortRec { IterationDelegate = PrintIterationState("InsertionSort Rec") },
                 new BubbleSort { IterationDelegate = PrintIterationState("BubbleSort Up") },
                 new SelectionSort { IterationDelegate = PrintIterationState("SelectionSort Max") },
                 new QuickSort { IterationDelegate = PrintIterationState("QuickSort Random Pivot") },
                 new MergeSort { IterationDelegate = PrintIterationState("MergeSort") },
+                new MergeSortIter { IterationDelegate = PrintIterationState("MergeSort Iterative") },
                 new HeapSort { IterationDelegate = PrintIterationState("HeapSort") }
             };
 
