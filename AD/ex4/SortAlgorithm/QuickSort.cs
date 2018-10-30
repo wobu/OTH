@@ -10,12 +10,12 @@ namespace SortAlgorithm
             get; set;
         } = (list) => { };
 
-        public void sort(List<int> list)
+        public virtual void sort(List<int> list)
         {
             rec_sort(list, 0, list.Count - 1);
         }
 
-        void rec_sort(List<int> list, int f, int l)
+        protected virtual void rec_sort(List<int> list, int f, int l)
         {
             if (f < l)
             {
@@ -28,40 +28,61 @@ namespace SortAlgorithm
             }
         }
 
-        static int partition(List<int> list, int f, int l)
+        protected int partition(List<int> list, int f, int l)
+        {
+            int pivot = f;
+            int pivotValue = list[pivot];
+            int newPivotIndex = f - 1;
+
+            for (int i = f; i <= l; i++)
+            {
+                if (list[i] <= pivotValue)
+                {
+                    newPivotIndex++;
+                    swap(list, i, newPivotIndex);
+                }
+            }
+
+            swap(list, pivot, newPivotIndex);
+
+            return newPivotIndex;
+        }
+
+        static void swap(List<int> list, int a, int b)
+        {
+            int tmp = list[a];
+            list[a] = list[b];
+            list[b] = tmp;
+        }
+    }
+
+    class QuickSortRandom : QuickSort
+    {
+        public override void sort(List<int> list)
+        {
+            rec_sort(list, 0, list.Count - 1);
+        }
+
+        protected override void rec_sort(List<int> list, int f, int l)
+        {
+            if (f < l)
+            {
+                int pivot = randomizedPartition(list, f, l);
+
+                IterationDelegate(list);
+
+                rec_sort(list, f, pivot - 1);
+                rec_sort(list, pivot + 1, l);
+            }
+        }
+
+        int randomizedPartition(List<int> list, int f, int l)
         {
             int pivot = new Random().Next(l - f) + f;
-            int pivotValue = list[pivot];
 
-            int left = f;
-            int right = l;
+            swap(list, f, pivot);
 
-            while (left < right)
-            {
-                while (list[left] < pivotValue && left < l)
-                {
-                    left++;
-                }
-
-                while (list[right] > pivotValue && right > f)
-                {
-                    right--;
-                }
-
-                if (left < right)
-                {
-                    swap(list, left, right);
-                }
-            }
-
-            if (list[left] >= pivotValue)
-            {
-                swap(list, left, right);
-                return left;
-            }
-
-
-            return pivot;
+            return partition(list, f, l);
         }
 
         static void swap(List<int> list, int a, int b)
