@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SortAlgorithm
 {
-    class InsertionSort : SortAlgorithm
+    class InsertionSortMin : SortAlgorithm
     {
         public Action<List<int>> IterationDelegate
         {
@@ -28,6 +28,33 @@ namespace SortAlgorithm
 
                     IterationDelegate(list);
                 }
+            }
+        }
+    }
+
+    class InsertionSort : SortAlgorithm
+    {
+        public Action<List<int>> IterationDelegate
+        {
+            get; set;
+        } = (list) => { };
+
+        public void sort(List<int> list)
+        {
+            for (int j = 1; j < list.Count; j++)
+            {
+                var key = list[j];
+                int i = j - 1;
+
+                while (i >= 0 && list[i] > key)
+                {
+                    list[i + 1] = list[i];
+                    i -= 1;
+                }
+
+                list[i + 1] = key;
+
+                IterationDelegate(list);
             }
         }
     }
