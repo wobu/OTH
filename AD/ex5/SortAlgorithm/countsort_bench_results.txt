@@ -1,0 +1,61 @@
+N[10]	    SortAlgorithm.MergeSort	    0	[1398,2152,2235,2570,4054...]
+N[10]	    SortAlgorithm.HeapSort	    0	[1398,2152,2235,2570,4054...]
+N[10]	    SortAlgorithm.CountSort	    0	[1398,2152,2235,2570,4054...]
+Template List: 5037,1519,9547,9868,8683...
+N[100]	    SortAlgorithm.MergeSort	    0	[1060,1162,1257,1267,1365...]
+N[100]	    SortAlgorithm.HeapSort	    0	[1060,1162,1257,1267,1365...]
+N[100]	    SortAlgorithm.CountSort	    0	[1060,1162,1257,1267,1365...]
+Template List: 8476,3052,4306,5395,8571...
+N[1000]	    SortAlgorithm.MergeSort	    0	[1002,1019,1019,1024,1029...]
+N[1000]	    SortAlgorithm.HeapSort	    0	[1002,1019,1019,1024,1029...]
+N[1000]	    SortAlgorithm.CountSort	    0	[1002,1019,1019,1024,1029...]
+Template List: 8536,6399,1317,6504,6228...
+N[10000]	SortAlgorithm.MergeSort	    2	[1002,1003,1003,1006,1006...]
+N[10000]	SortAlgorithm.HeapSort	    5	[1002,1003,1003,1006,1006...]
+N[10000]	SortAlgorithm.CountSort	    0	[1002,1003,1003,1006,1006...]
+Template List: 1285,3651,2841,3885,3823...
+N[100000]	SortAlgorithm.MergeSort	    29	[1000,1000,1000,1000,1000...]
+N[100000]	SortAlgorithm.HeapSort	    63	[1000,1000,1000,1000,1000...]
+N[100000]	SortAlgorithm.CountSort	    1	[1000,1000,1000,1000,1000...]
+Template List: 3407,9448,2489,9783,9878...
+N[1000000]	SortAlgorithm.MergeSort	    320	[1000,1000,1000,1000,1000...]
+N[1000000]	SortAlgorithm.HeapSort	    876	[1000,1000,1000,1000,1000...]
+N[1000000]	SortAlgorithm.CountSort	    10	[1000,1000,1000,1000,1000...]
+Template List: 8183,1517,4510,1665,9700...
+N[10000000]	SortAlgorithm.MergeSort	    3856	[1000,1000,1000,1000,1000...]
+N[10000000]	SortAlgorithm.HeapSort	    11235	[1000,1000,1000,1000,1000...]
+N[10000000]	SortAlgorithm.CountSort	    106	    [1000,1000,1000,1000,1000...]
+Template List: 6493,7278,4067,4092,1168...
+N[100000000]	SortAlgorithm.MergeSort	40392	[1000,1000,1000,1000,1000...]
+N[100000000]	SortAlgorithm.HeapSort	144958	[1000,1000,1000,1000,1000...]
+N[100000000]	SortAlgorithm.CountSort	1086	[1000,1000,1000,1000,1000...]
+
+Don't know why optimized count sort is slower ... :D
+
+Template List: 8028,7918,2725,4295,6685...
+N[10]	        SortAlgorithm.CountSort	    0	[2725,2845,4295,5166,6685...]
+N[10]	        SortAlgorithm.CountSortOpt	1	[2725,2845,4295,5166,6685...]
+Template List: 6038,3260,1725,9477,9389...
+N[100]	        SortAlgorithm.CountSort	    0	[1004,1188,1228,1328,1374...]
+N[100]	        SortAlgorithm.CountSortOpt	0	[1004,1188,1228,1328,1374...]
+Template List: 7420,6385,4661,1184,6621...
+N[1000]	        SortAlgorithm.CountSort	    0	[1000,1001,1021,1023,1026...]
+N[1000]	        SortAlgorithm.CountSortOpt	0	[1000,1001,1021,1023,1026...]
+Template List: 3821,6008,8632,7213,3334...
+N[10000]	    SortAlgorithm.CountSort	    0	[1000,1002,1003,1004,1004...]
+N[10000]	    SortAlgorithm.CountSortOpt	0	[1000,1002,1003,1004,1004...]
+Template List: 3821,6008,8632,7213,3334...
+N[10000]	    SortAlgorithm.CountSort	    0	[1000,1002,1003,1004,1004...]
+N[10000]	    SortAlgorithm.CountSortOpt	0	[1000,1002,1003,1004,1004...]
+Template List: 5818,4357,7271,9991,9652...
+N[100000]	    SortAlgorithm.CountSort	    1	[1000,1000,1000,1000,1000...]
+N[100000]	    SortAlgorithm.CountSortOpt	2	[1000,1000,1000,1000,1000...]
+Template List: 1881,8506,5906,4550,2689...
+N[1000000]	    SortAlgorithm.CountSort	    13	[1000,1000,1000,1000,1000...]
+N[1000000]	    SortAlgorithm.CountSortOpt	25	[1000,1000,1000,1000,1000...]
+Template List: 5309,6336,7246,9760,6076...
+N[10000000]	    SortAlgorithm.CountSort	    127	[1000,1000,1000,1000,1000...]
+N[10000000]	    SortAlgorithm.CountSortOpt	324	[1000,1000,1000,1000,1000...]
+Template List: 9161,9082,1731,7258,8154...
+N[100000000]	SortAlgorithm.CountSort	    1159	[1000,1000,1000,1000,1000...]
+N[100000000]	SortAlgorithm.CountSortOpt	3753	[1000,1000,1000,1000,1000...]
