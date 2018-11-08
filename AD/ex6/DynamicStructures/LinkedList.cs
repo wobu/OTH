@@ -2,16 +2,47 @@ using System;
 
 namespace DynamicStructures
 {
-    class Element
+    class LinkedList : List<LinkedList>
     {
-        public int Val { get; set; }
-        public Element Next { get; set; }
-    }
-    class LinkedList
-    {
-        private Element Head { get; set; }
+        public override int Get(int n)
+        {
+            Element cur = null;
 
-        public void Append(int val)
+            for (int i = 0; i <= n; i++)
+            {
+                cur = i == 0 ? Head : cur.Next;
+
+                if (cur == null)
+                {
+                    throw new IndexOutOfRangeException(i.ToString());
+                }
+            }
+
+            return cur.Val;
+        }
+
+        public override int Count()
+        {
+            if (Head == null)
+            {
+                return 0;
+            }
+            else
+            {
+                var cur = Head;
+                var count = 0;
+
+                while (cur != null)
+                {
+                    count++;
+                    cur = cur.Next;
+                }
+
+                return count;
+            }
+        }
+
+        public override void Append(int val)
         {
             var e = new Element { Val = val };
 
@@ -44,7 +75,7 @@ namespace DynamicStructures
             cur.Next = list.Head;
         }
 
-        public void Delete(int val)
+        public override void Delete(int val)
         {
             var cur = Head;
             Element prev = null;
@@ -79,7 +110,7 @@ namespace DynamicStructures
             }
         }
 
-        public void Print()
+        public override void Print()
         {
             if (Head == null)
             {
