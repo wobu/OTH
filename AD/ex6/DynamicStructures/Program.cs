@@ -72,6 +72,20 @@ namespace DynamicStructures
             }
 
             ringLinkedList.Print();
+
+            var random = new Random();
+
+            // lottery
+            Console.WriteLine("\nStart Lottery!");
+
+            for (int i = 0; i < 6; i++)
+            {
+                var val = ringLinkedList.Get(random.Next(0, ringLinkedList.Count() - 1));
+
+                Console.WriteLine(val);
+
+                ringLinkedList.Delete(val);
+            }
         }
     }
 }
