@@ -1,0 +1,16 @@
+62 25 11 36 
+-34 31 2 -28 
+46 45 73 -18 
+16 40 -4 37 
+62 25 -34 31 
+11 36 2 -28 
+46 45 16 40 
+73 -18 -4 37 
+[4]	Mult: 00:00:00.0010183	FastMult: 00:00:00.0028914
+[8]	Mult: 00:00:00.0000086	FastMult: 00:00:00.0004839
+[32]	Mult: 00:00:00.0004327	FastMult: 00:00:00.0068764
+[128]	Mult: 00:00:00.0293723	FastMult: 00:00:00.2825652
+[512]	Mult: 00:00:02.3734821	FastMult: 00:00:12.6178243
+
+
+Summary: FastMult implementation is buggy and due to subslicing the matrix recursivly with nested loops its very inefficient... :/
