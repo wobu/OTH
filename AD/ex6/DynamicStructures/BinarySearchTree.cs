@@ -27,6 +27,8 @@ namespace DynamicStructures
             return false;
         }
 
+        // O(log n)
+        // every case has (log n )
         public override void DeleteValue(int val)
         {
             TreeElement cur = Root;
@@ -37,6 +39,7 @@ namespace DynamicStructures
                 if (val == cur.Val)
                 {
                     // Leaf
+                    // log n
                     if (cur.Left == null && cur.Right == null)
                     {
                         if (prev == null) Root = null;
