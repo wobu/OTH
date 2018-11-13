@@ -6,8 +6,36 @@ namespace DynamicStructures
     {
         static void Main(string[] args)
         {
-            task1();
-            task2();
+            // task1();
+            // task2();
+            task3();
+        }
+
+        static void task3()
+        {
+            var binarySearchTree = new BinarySearchTree();
+
+            binarySearchTree.Insert(6);
+            binarySearchTree.Insert(8);
+            binarySearchTree.Insert(7);
+            binarySearchTree.Insert(9);
+            binarySearchTree.Insert(4);
+            binarySearchTree.Insert(5);
+            binarySearchTree.Insert(2);
+            binarySearchTree.Insert(3);
+            binarySearchTree.Insert(1);
+
+            binarySearchTree.Print();
+
+            // Delete Leaf
+            binarySearchTree.DeleteValue(9);
+            binarySearchTree.Print();
+            // Delete entry with 1 follower
+            binarySearchTree.DeleteValue(8);
+            binarySearchTree.Print();
+            // Delete with 2 Follower
+            binarySearchTree.DeleteValue(2);
+            binarySearchTree.Print();
         }
 
         static void task1()
