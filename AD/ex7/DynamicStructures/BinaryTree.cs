@@ -1,109 +1,29 @@
 using System;
-using System.Collections.Generic;
 
 namespace DynamicStructures
 {
-    class BinaryTree : Tree
+    class BinaryTreeElement
     {
-        public static BinaryTree CreateWithPreOrder(List<int> inorder, List<int> preorder)
-        {
-            var tree = new BinaryTree();
+        public int Val { get; set; }
+        public BinaryTreeElement Left { get; set; }
+        public BinaryTreeElement Right { get; set; }
+    }
+    abstract class BinaryTree : Tree
+    {
+        protected BinaryTreeElement Root { get; set; }
 
-            tree.Insert(preorder[0]);
+        public abstract void Insert(int val);
+        public abstract bool Contains(int val);
 
-            for (int i = 1; i < preorder.Count; i++)
-            {
-                var e = new TreeElement { Val = preorder[i] };
+        public abstract void DeleteValue(int val);
 
-                placeValue(tree.Root, e, inorder);
-            }
-
-            return tree;
-        }
-
-        public static void placeValue(TreeElement root, TreeElement e, List<int> inorder)
-        {
-            if (isLeft(inorder, root.Val, e.Val))
-            {
-                if (root.Left == null) root.Left = e;
-                else {
-                    placeValue(root.Left, e, inorder);
-                }
-            }
-            else
-            {
-                if (root.Right == null) root.Right = e;
-                else {
-                    placeValue(root.Right, e, inorder);
-                }
-            }
-        }
-
-        public static bool isLeft(List<int> inorder, int root, int val)
-        {
-            foreach (var v in inorder)
-            {
-                if (v == root) return false;
-                else if(v == val) return true;
-            }
-
-            return false;
-        }
-
-        public static BinaryTree CreateWithPostOrder(List<int> inorder, List<int> postorder)
-        {
-            var tree = new BinaryTree();
-
-            tree.Insert(postorder[postorder.Count - 1]);
-
-            for (int i = postorder.Count - 2; i >= 0; i--)
-            {
-                var e = new TreeElement { Val = postorder[i] };
-
-                placeValue(tree.Root, e, inorder);
-            }
-
-            return tree;
-        }
-
-        public override bool Contains(int val)
-        {
-            // TODO not implemented
-
-            return false;
-        }
-
-        public override void DeleteValue(int val)
-        {
-            // TODO not implemented
-        }
-
-        public override void Insert(int val)
-        {
-            var e = new TreeElement { Val = val };
-
-            if (Root == null)
-            {
-                Root = e;
-            }
-            else
-            {
-                Insert(Root, e);
-            }
-        }
-
-        public void Insert(TreeElement root, TreeElement e)
-        {
-            // TODO
-        }
-
-        public override void Print()
+        public virtual void Print()
         {
             Print(Root);
             Console.Write("\n");
         }
 
-        public void Print(TreeElement e)
+        public void Print(BinaryTreeElement e)
         {
             if (e == null)
             {

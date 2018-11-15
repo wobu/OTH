@@ -23,13 +23,13 @@ namespace DynamicStructures
 
         static void task1_createBinaryTrees()
         {
-            var preorderTree = BinaryTree.CreateWithPreOrder(
+            var preorderTree = BinaryTreeDummy.CreateWithPreOrder(
                 new List<int> { 1, 3, 6, 7, 8, 9 },
                 new List<int> { 6, 3, 1, 8, 7, 9 });
 
             preorderTree.Print();
 
-            var postOrderTree = BinaryTree.CreateWithPostOrder(
+            var postOrderTree = BinaryTreeDummy.CreateWithPostOrder(
                 new List<int> { 1, 3, 6, 7, 8, 9 },
                 new List<int> { 1, 3, 7, 9, 8, 6});
 

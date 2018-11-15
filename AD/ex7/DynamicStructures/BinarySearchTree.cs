@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace DynamicStructures
 {
-    class BinarySearchTree : Tree
+    class BinarySearchTree : BinaryTree
     {
         public override bool Contains(int val)
         {
-            TreeElement cur = Root;
+            BinaryTreeElement cur = Root;
 
             while (cur != null)
             {
@@ -32,8 +32,8 @@ namespace DynamicStructures
         // every case has (log n )
         public override void DeleteValue(int val)
         {
-            TreeElement cur = Root;
-            TreeElement prev = null;
+            BinaryTreeElement cur = Root;
+            BinaryTreeElement prev = null;
 
             while (cur != null)
             {
@@ -53,7 +53,7 @@ namespace DynamicStructures
                     // 2 Follower
                     else if (cur.Left != null && cur.Right != null)
                     {
-                        TreeElement inOrderMinValueRight = cur.Right;
+                        BinaryTreeElement inOrderMinValueRight = cur.Right;
 
                         while (inOrderMinValueRight.Left != null)
                         {
@@ -113,7 +113,7 @@ namespace DynamicStructures
 
         public override void Insert(int val)
         {
-            var e = new TreeElement { Val = val };
+            var e = new BinaryTreeElement { Val = val };
 
             if (Root == null)
             {
@@ -125,7 +125,7 @@ namespace DynamicStructures
             }
         }
 
-        public void Insert(TreeElement root, TreeElement e)
+        public void Insert(BinaryTreeElement root, BinaryTreeElement e)
         {
             if (e.Val <= root.Val)
             {
@@ -136,28 +136,6 @@ namespace DynamicStructures
             {
                 if (root.Right == null) root.Right = e;
                 else Insert(root.Right, e);
-            }
-        }
-
-        public override void Print()
-        {
-            Print(Root);
-            Console.Write("\n");
-        }
-
-        public void Print(TreeElement e)
-        {
-            if (e == null)
-            {
-                Console.Write("n");
-            }
-            else
-            {
-                Console.Write("(");
-                Print(e.Left);
-                Console.Write($",{e.Val},");
-                Print(e.Right);
-                Console.Write(")");
             }
         }
     }
