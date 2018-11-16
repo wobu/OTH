@@ -10,5 +10,7 @@ namespace DynamicStructures
         void DeleteValue(int val);
 
         void Print();
+        
+        void PrintInorder();
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace DynamicStructures
 {
-    class BinaryTreeDummy : BinaryTree
+    class BinaryTreeDummy : BinaryTree<BinaryTreeElement>
     {
-        public static BinaryTree CreateWithPreOrder(List<int> inorder, List<int> preorder)
+        public static BinaryTreeDummy CreateWithPreOrder(List<int> inorder, List<int> preorder)
         {
             var tree = new BinaryTreeDummy();
 
@@ -50,7 +50,7 @@ namespace DynamicStructures
             return false;
         }
 
-        public static BinaryTree CreateWithPostOrder(List<int> inorder, List<int> postorder)
+        public static BinaryTreeDummy CreateWithPostOrder(List<int> inorder, List<int> postorder)
         {
             var tree = new BinaryTreeDummy();
 

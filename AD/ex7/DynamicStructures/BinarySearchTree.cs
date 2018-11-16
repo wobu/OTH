@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DynamicStructures
 {
-    class BinarySearchTree : BinaryTree
+    class BinarySearchTree : BinaryTree<BinaryTreeElement>
     {
         public override bool Contains(int val)
         {
@@ -125,7 +125,7 @@ namespace DynamicStructures
             }
         }
 
-        public void Insert(BinaryTreeElement root, BinaryTreeElement e)
+        public virtual void Insert(BinaryTreeElement root, BinaryTreeElement e)
         {
             if (e.Val <= root.Val)
             {
