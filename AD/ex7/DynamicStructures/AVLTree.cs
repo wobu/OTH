@@ -21,7 +21,13 @@ namespace DynamicStructures
         public AVLTreeElement Left { get { return left; } }
         public AVLTreeElement Right { get { return right; } }
 
-        public override string ToString() {
+        public bool IsLeaf()
+        {
+            return Left == null && Right == null;
+        }
+
+        public override string ToString()
+        {
             return $"{Val} [h: {Height}]";
         }
     }
@@ -55,91 +61,57 @@ namespace DynamicStructures
 
         public override void DeleteValue(int val)
         {
-            // AVLTreeElement cur = Root;
-            // AVLTreeElement prev = null;
+            DeleteValue(ref root, val);
+        }
+        public void DeleteValue(ref AVLTreeElement e, int val)
+        {
+            if (val == e.Val)
+            {
+                if (e.IsLeaf())
+                {
+                    e = null;
+                }
+                // 2 Follower
+                else if (e.Left != null && e.Right != null)
+                {
+                    AVLTreeElement inOrderMinValueRight = e.Right;
 
-            // while (cur != null)
-            // {
-            //     if (val == cur.Val)
-            //     {
-            //         // Leaf
-            //         if (cur.Left == null && cur.Right == null)
-            //         {
-            //             if (prev == null) Root = null;
-            //             else
-            //             {
-            //                 if (val <= prev.Val) prev.Left = null;
-            //                 else prev.Right = null;
-            //             }
-            //         }
-            //         // 2 Follower
-            //         else if (cur.Left != null && cur.Right != null)
-            //         {
-            //             AVLTreeElement inOrderMinValueRight = cur.Right;
+                    while (inOrderMinValueRight.Left != null)
+                    {
+                        inOrderMinValueRight = inOrderMinValueRight.Left;
+                    }
 
-            //             while (inOrderMinValueRight.Left != null)
-            //             {
-            //                 inOrderMinValueRight = inOrderMinValueRight.Left;
-            //             }
-
-            //             if (prev == null)
-            //             {
-            //                 Root = inOrderMinValueRight;
-            //                 Root.Left = cur.Left;
-            //                 Root.Right = cur.Right;
-            //             }
-            //             else
-            //             {
-            //                 if (val <= prev.Val)
-            //                 {
-            //                     prev.Left = inOrderMinValueRight;
-            //                     prev.Left.Left = cur.Left;
-            //                     if (inOrderMinValueRight != cur.Right)
-            //                     {
-            //                         prev.Left.Right = cur.Right;
-            //                     }
-            //                 }
-            //                 else
-            //                 {
-            //                     prev.Right = inOrderMinValueRight;
-            //                     prev.Right.Left = cur.Left;
-            //                     if (inOrderMinValueRight != cur.Right)
-            //                     {
-            //                         prev.Right.Right = cur.Right;
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //         // 1 Follower
-            //         else
-            //         {
-            //             if (prev == null) Root = cur.Left ?? cur.Right;
-            //             else
-            //             {
-            //                 if (val <= prev.Val) prev.Left = cur.Left ?? cur.Right;
-            //                 else prev.Right = cur.Left ?? cur.Right;
-            //             }
-            //         }
-
-            //         // check rotation
-            //         prev.UpdateHeight();
-
-            //         break;
-            //     }
-            //     else
-            //     {
-            //         prev = cur;
-
-            //         if (val <= cur.Val) cur = cur.Left;
-            //         else cur = cur.Right;
-            //     }
-            // }
+                    inOrderMinValueRight.left = e.Left;
+                    if (e.Right != inOrderMinValueRight) inOrderMinValueRight.right = e.Right;
+                    e.left = null;
+                    e.right = null;
+                    e = inOrderMinValueRight;
+                }
+                // 1 Follower
+                else
+                {
+                    e = e.Left ?? e.Right;
+                }
+            }
+            else
+            {
+                if (val <= e.Val && e.Left != null)
+                {
+                    DeleteValue(ref e.left, val);
+                    CheckRotationLeft(ref e);
+                }
+                else if (e.Right != null)
+                {
+                    DeleteValue(ref e.right, val);
+                    CheckRotationRight(ref e);
+                }
+            }
         }
 
         public override void Insert(int val)
         {
             var e = new AVLTreeElement { Val = val };
-       
+
             if (Debug) Console.WriteLine($"[Debug] Insert {e}");
 
             if (Root == null)

@@ -9,6 +9,8 @@ namespace DynamicStructures
         T Left { get; }
 
         T Right { get; }
+
+        bool IsLeaf();
     }
 
     class BinaryTreeElement : BinaryTreeElementBase<BinaryTreeElement>
@@ -16,6 +18,10 @@ namespace DynamicStructures
         public int Val { get; set; }
         public virtual BinaryTreeElement Left { get; set; }
         public virtual BinaryTreeElement Right { get; set; }
+        public bool IsLeaf()
+        {
+            return Left == null && Right == null;
+        }
     }
     abstract class BinaryTree<T> : Tree where T : BinaryTreeElementBase<T>
     {
