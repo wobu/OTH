@@ -19,7 +19,9 @@ namespace DynamicStructures
     }
     abstract class BinaryTree<T> : Tree where T : BinaryTreeElementBase<T>
     {
-        protected T Root { get; set; }
+        // needed as variable to have access by reference possibility...
+        protected T root;
+        public T Root { get { return this.root; } protected set { this.root = value; } }
 
         public abstract void Insert(int val);
         public abstract bool Contains(int val);

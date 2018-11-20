@@ -6,18 +6,30 @@ namespace DynamicStructures
     class AVLTreeElement : BinaryTreeElementBase<AVLTreeElement>
     {
         public int Val { get; set; }
-        public int Height { get; set; } = -1;
+        public int Height { get; set; } = 0;
 
         public void UpdateHeight()
         {
-            Height = 1 + Math.Max(Left != null ? Left.Height : -1, Right != null ? Right.Height : -1);
+            Height = Math.Max(Left != null ? 1 + Left.Height : 0, Right != null ? 1 + Right.Height : 0);
         }
-        public AVLTreeElement Left { get; set; }
-        public AVLTreeElement Right { get; set; }
+
+        // had to provide this as variable to use the ref keyword....
+        // ref on Properties aren't possible
+        public AVLTreeElement left;
+        public AVLTreeElement right;
+
+        public AVLTreeElement Left { get { return left; } }
+        public AVLTreeElement Right { get { return right; } }
+
+        public override string ToString() {
+            return $"{Val} [h: {Height}]";
+        }
     }
 
     class AVLTree : BinaryTree<AVLTreeElement>
     {
+        public bool Debug { get; set; }
+
         public override bool Contains(int val)
         {
             AVLTreeElement cur = Root;
@@ -109,6 +121,9 @@ namespace DynamicStructures
             //             }
             //         }
 
+            //         // check rotation
+            //         prev.UpdateHeight();
+
             //         break;
             //     }
             //     else
@@ -124,6 +139,8 @@ namespace DynamicStructures
         public override void Insert(int val)
         {
             var e = new AVLTreeElement { Val = val };
+       
+            if (Debug) Console.WriteLine($"[Debug] Insert {e}");
 
             if (Root == null)
             {
@@ -131,70 +148,80 @@ namespace DynamicStructures
             }
             else
             {
-                Insert(Root, e);
+                Insert(ref this.root, e);
             }
         }
 
-        public void Insert(AVLTreeElement root, AVLTreeElement e)
+        public void Insert(ref AVLTreeElement root, AVLTreeElement e)
         {
             if (e.Val <= root.Val)
             {
-                if (root.Left == null) root.Left = e;
-                else
-                {
-                    Insert(root.Left, e);
-                    CheckRotationRight(ref e);
-                }
+                if (root.Left == null) root.left = e;
+                else Insert(ref root.left, e);
+
+                CheckRotationRight(ref root);
             }
             else
             {
-                if (root.Right == null) root.Right = e;
-                else
-                {
-                    Insert(root.Right, e);
-                    CheckRotationLeft(ref e);
-                }
+                if (root.Right == null) root.right = e;
+                else Insert(ref root.right, e);
+
+                CheckRotationLeft(ref root);
             }
         }
 
         private void RotateLeft(ref AVLTreeElement e)
         {
-            AVLTreeElement b = e.Right;
+            if (Debug) Console.WriteLine($"[Debug] RotateLeft {e}");
 
-            e.Right = b.Left;
-            b.Left = e;
-            e = b;
+            AVLTreeElement newRoot = e.Right;
+
+            e.right = newRoot.left;
+            newRoot.left = e;
+            e = newRoot;
 
             e.Left.UpdateHeight();
+            if (e.Right != null) e.Right.UpdateHeight();
             e.UpdateHeight();
         }
 
         private void RotateRight(ref AVLTreeElement e)
         {
-            AVLTreeElement b = e.Left;
+            if (Debug) Console.WriteLine($"[Debug] RotateRight {e}");
 
-            e.Left = b.Right;
-            b.Right = e;
-            e = b;
+            AVLTreeElement newRoot = e.Left;
+
+            e.left = newRoot.Right;
+            newRoot.right = e;
+            e = newRoot;
 
             e.Right.UpdateHeight();
+            if (e.Left != null) e.Left.UpdateHeight();
             e.UpdateHeight();
         }
 
         private void DoubleRotationLeft(ref AVLTreeElement e)
         {
-            AVLTreeElement right = e.Right;
+            if (Debug) Console.WriteLine($"[Debug] DoubleRotationLeft {e}");
 
-            RotateRight(ref right);
+            RotateRight(ref e.right);
             RotateLeft(ref e);
         }
 
         private void DoubleRotationRight(ref AVLTreeElement e)
         {
-            AVLTreeElement left = e.Left;
+            if (Debug) Console.WriteLine($"[Debug] DoubleRotationRight {e}");
 
-            RotateLeft(ref left);
+            RotateLeft(ref e.left);
             RotateRight(ref e);
+        }
+
+        private bool ValidateChildHeights(AVLTreeElement e)
+        {
+            var leftHeight = e.Left != null ? 1 + e.Left.Height : 0;
+            var rightHeight = e.Right != null ? 1 + e.Right.Height : 0;
+
+            return Math.Abs(leftHeight - rightHeight) <= 1;
         }
 
         private void CheckRotationRight(ref AVLTreeElement e)
@@ -203,9 +230,9 @@ namespace DynamicStructures
             {
                 if (e.Left != null)
                 {
-                    if (Math.Abs(e.Left.Height - e.Right.Height) == 2)
+                    if (!ValidateChildHeights(e))
                     {
-                        if (e.Left.Right.Height > e.Left.Right.Height)
+                        if ((e?.Left?.Right?.Height + 1 ?? 0) > (e?.Left?.Left?.Height + 1 ?? 0))
                         {
                             DoubleRotationRight(ref e);
                         }
@@ -232,15 +259,15 @@ namespace DynamicStructures
             {
                 if (e.Right != null)
                 {
-                    if (Math.Abs(e.Right.Height - e.Left.Height) == 2)
+                    if (!ValidateChildHeights(e))
                     {
-                        if (e.Right.Right.Height > e.Right.Right.Height)
+                        if ((e?.Right?.Left?.Height + 1 ?? 0) > (e?.Right?.Right?.Height + 1 ?? 0))
                         {
                             DoubleRotationLeft(ref e);
                         }
                         else
                         {
-                            RotateRight(ref e);
+                            RotateLeft(ref e);
                         }
                     }
                     else

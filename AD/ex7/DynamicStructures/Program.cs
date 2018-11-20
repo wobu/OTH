@@ -7,8 +7,14 @@ namespace DynamicStructures
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Task1:");
             task1_createBinaryTrees();
+            Console.WriteLine("Task1:");
+            task2_AVLTree();
 
+            // task 4 
+            // just insert elements to AVL tree and print => sort algorithm
+            Console.WriteLine("Task4:");
             task4_Sort_AVLTree();
 
             // task 3 
@@ -18,9 +24,6 @@ namespace DynamicStructures
             // H = 3 -> 16 trees
             // n(h) = 2 * n (h-1) * n (h-2)
             // n(5) = 2 * n(4) * n(3) = 2 * 2 * n(3) * n(2) * n(3) = 2 * 2 * 16 * 4 * 16 = 2 ^ 12 = 4096
-
-            // task 4 
-            // just insert elements to AVL tree and print => sort algorithm
         }
 
         static void task4_Sort_AVLTree()
@@ -34,6 +37,23 @@ namespace DynamicStructures
 
             // just insert values and print them => AVLTree sorts itself
             avlTree.Print();
+        }
+
+        static void task2_AVLTree()
+        {
+            var avlTree = new AVLTree { Debug = false };
+
+            foreach (int i in new List<int> { 5, 6, 9, 12, 13, 3, 8, 10, 11, 16, 15, 14, 4, 2, 1 })
+            {
+                avlTree.Insert(i);
+            }
+            avlTree.PrintInorder();
+
+            foreach (int i in new List<int> { 12, 8, 5, 4, 3, 6, 15, 14 })
+            {
+                avlTree.DeleteValue(i);
+            }
+            avlTree.PrintInorder();
         }
 
         static void task1_createBinaryTrees()
