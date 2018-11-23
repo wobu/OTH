@@ -1,0 +1,149 @@
+\documentclass{scrbook}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{booktabs}
+\usepackage{textcomp}   % fuer Euro-Zeichen
+
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath,amsfonts,amssymb}
+
+\usepackage[
+per-mode=fraction,		% "per-mode = fraction" schaltet das Paket so, dass durch "\per" getrennte Einheiten als Bruch dargestellt werden
+decimalsymbol=comma		% Dezimaltrennzeichen soll das Komma sein
+]{siunitx}   
+
+\usepackage{babelbib}
+\selectbiblanguage{german}
+
+\begin{document}
+
+\chapter{Name des Kapitels}
+Hier ist etwas Text, um die Funktion von Fließumgebungen zu zeigen. Ich schreibe noch etwas mehr, um einen Zeilenumbruch zu erhalten. Natürlich ist dies ein relativ kurzer Absatz. Außerdem verweise ich auf \autoref{tab:Stifte}.
+
+\begin{table}[htb]
+\centering
+\caption{Besitzer der Buntstifte}
+\label{tab:Stifte}
+\begin{tabular}{llcr}\toprule
+& \multicolumn{3}{c}{Besitzer}\\\cmidrule{2-4}
+Stift & Beate & Thomas & Jürgen\\\midrule
+rot & X & X & X\\\midrule
+blau & & X & X\\\midrule
+grün & X & & X\\\bottomrule
+\end{tabular}
+\end{table}
+
+Mit einem neuen Absatz kann es passieren, dass Fließobjekte im Ausgabedokument zwischen Absätzen auftauchen, die im Quelldokument eigentlich nacheinander stehen.
+
+\LaTeX{} sucht die passende Position für die Fließobjekte, wie z.\,B. Tabellen und Abbildungen, automatisch. Das Objekt wird dabei gemäß der Platzierungsparameter platziert. Ist auf der aktuellen Seite nicht genug Platz, so wird die Abbildung oder Tabelle auf der nächsten Seite gesetzt.
+
+Es folgt eine Tabelle mit den Budget der letzten Jahre. Fließobjekte werden automatisch fortlaufend nummeriert. Standardmäßig besteht die Nummerierung aus der Kapitelnummer und einer fortlaufenden Nummer je Kapitel (bei Dokumentenklasse \texttt{scrbook}). Selbstverständlich kann man auch auf \autoref{tab:Budget} verweisen, um eine Verbindung zwischen Fließtext und der Tabelle herzustellen.
+
+\begin{table}[htb]
+\centering
+\caption{Jahresbudgets}
+\label{tab:Budget}
+\begin{tabular}{lrrr}\toprule
+Abteilung & \multicolumn{3}{c}{Jahresbudget (Mio.\,\texteuro)}\\\cmidrule{2-4}  % Euro-Zeichen benoetigt Paket marvosym
+& 2010 & 2011 & 2012\\\midrule
+Vertrieb & 6 & 3 & 4\\\midrule
+Marketing & 2 & 1 & 3\\\midrule
+Konstruktion & 12 & 13 & 12\\\midrule
+Forschung & 3 & 4 & 4\\\midrule
+Instandhaltung & 1 & 2 & 3\\\bottomrule
+\end{tabular}
+\end{table}
+
+Mehrere Leerzeichen hintereinander werden bei der Eingabe ignoriert. Es folgt Text ohne besonderen Inhalt. Er ist nur dafür da, um mehr Fließtext in diesem Dokument zu haben. Wie man sieht, wurde dieser Absatz im Ausgabedokument vor der \autoref{tab:Budget} plaziert, obwohl er im im Quelltext nach ihr kommt.
+
+\section{Abbildung eines Sterns}
+In \autoref{fig:Spirale} sind ein Stern und eine Spirale dargestellt. Abbildungen sollten, wenn möglich, immer in einem Vektor-Format gespeichert werden. Dies verringert die Dateigröße der Ausgabedatei. Zudem lassen sich Vektorgrafiken verlustfrei auch auf größeren Papierformaten ausdrucken. Bitmap-Grafiken verlieren beim Vergrößern an Qualität. Dieser Unterschied lässt sich leicht begreifen, wenn man jeweils in eine Vektor- und in eine Bitmap-Grafik hineinzoomt.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\columnwidth]{Stern.pdf}
+	\caption{Ein schöner Stern und eine Spirale.}
+	\label{fig:Spirale}
+\end{figure}
+
+\section{Mathematik}
+Ein großer Vorteil von \LaTeX ist der Satz von mathematischen Formeln direkt aus dem Quelldokument heraus.
+
+Mathematische Formeln können auf zwei Weisen eingebunden werden:
+\begin{itemize}
+	\item Direkt aus dem Fließtext heraus (für kurze Formeln). Zum Beispiel: $a^2 + b^2 = c^2$
+	\item In einer separaten Mathematik-Umgebung.
+\end{itemize}
+
+In jedem Fall sollten die Pakete der \emph{American Mathematical Society}\footnote{AMS-Pakete} eingebunden werden. Sie erleichtern die Erstellung von Formeln.
+
+\autoref{eq:Formel1} zeigt ein Beispiel für eine Formel in einer Mathematik-Umgebung.
+\begin{equation}
+e = m \cdot c^2 \label{eq:Formel1}
+\end{equation}
+Hier sind einige Beispiele zum Hoch- und Tiefstellen in Formeln. Die Gleicheitszeichen werden in der \texttt{align}-Umgebung nicht automatisch übereinander angeordnet. Dies muss durch das Setzen von \&-Zeichen erzwungen werden. Die Formeln werden dann an diesem Zeichen ausgerichtet.
+\begin{align}
+	a &= 2^n + 2^{n+1}\\
+	F_{axial} &= F_{wirk} \cdot \cos{\alpha}
+\end{align}
+Natürlich lassen sich auch Brüche darstellen.
+
+\begin{equation}
+	\frac{1}{2} + \frac{1}{4} = \frac{2}{4} + \frac{1}{4} = \frac{3}{4}
+\end{equation}
+
+\vspace{0.5\baselineskip}
+Für Doppelbrüche empfiehlt sich der Befehl \verb+\dfrac{Zähler}{Nenner}+. Er verringert nicht die Zeichengröße, was die Übersichtlichkeit erhöht. Die Gleichungen~\ref{eq:frac} und \ref{eq:cfrac} machen den Unterschied deutlich.    % Das Tilde-Zeichen (~) stellt hier sicher, dass zwischen "Gleichungen" und der Nummer, die sich aus "~\ref{eq:frac}" ergibt, kein Zeilenumbruch eingefügt wird; dies wäre unschön.
+\begin{align}
+	C &= \frac{\frac{1+b}{c-4}-1}{\frac{6\cdot 2}{4\cdot x}+Z}\label{eq:frac}\\[0.5\baselineskip]  % hier wird eine halbe Zeile zusätzlicher Abstand eingefügt
+	C &= \dfrac{\dfrac{1+b}{c-4}-1}{\dfrac{6\cdot 2}{4\cdot x}+Z} \label{eq:cfrac}
+\end{align}
+
+Auch Matrizen lassen sich einfach erzeugen. In \autoref{eq:Matrix} ist ein Beispiel gezeigt.
+\begin{equation}
+	R_\gamma =
+	\left(   % erzeugt eine öffnende Klammer
+	\begin{array}{cc}   % funktioniert ähnlich wie bei Tabellen
+	\cos{\gamma} & -\sin{\gamma} \\
+	\sin{\gamma} & \cos{\gamma}
+	\end{array}
+	\right)  % erzeugt eine schließende Klammer
+	\label{eq:Matrix}
+\end{equation}
+
+\section{Darstellung von Zahlen Maßeinheiten}
+Beim Satz von Zahlen und Zahlen mit Maßeinheiten werden regelmäßig einige Fehler gemacht.
+
+Die Mathematik-Umgebungen in \LaTeX{} verwenden automatisch kursive Schriftschnitte. Maßeinheiten sind jedoch nicht-kursiv darzustellen. In \autoref{eq:schlecht} ist ein Negativbeispiel gezeigt.
+\begin{equation}
+v = \dfrac{100 m}{4 s} = 25 \dfrac{m}{s} \label{eq:schlecht}	
+\end{equation}
+Das $v$, welches als Formelzeichen für die Geschwindigkeit steht, ist kursiv gesetzt. Dies ist korrekt. Jedoch wurden auch die Einheiten (Meter und Sekunde) kursiv dargestellt. Außerdem ist zwischen den Zahlen und Maßeinheiten kein Leerraum.
+
+Abhilfe schafft das Paket \texttt{siunitx}. Mit ihm lassen sich Kombinationen von Zahlen und Maßeinheiten sehr intuitiv eingeben. Das Paket kümmert sich sodann um die korrekte und ansprechende Darstellung in der Ausgabe. \autoref{eq:gut} zeigt die selbe Gleichung wie in \autoref{eq:schlecht}, jedoch ansprechend formatiert.
+\begin{equation}
+	v = \dfrac{\SI{100}{\metre}}{\SI{4}{\second}} = \SI{25}{\metre\per\second} \label{eq:gut}
+\end{equation}
+
+Weiterhin lassen sich Zahlen mit Tausender-Trennzeichen und in wissenschaftlicher Darstellung eingeben. Hier sind zwei Beispiele:
+\begin{itemize}
+	\item \SI{2394552,345}{\kilo\metre}
+	\item \SI{3,456e-6}{\ampere}
+	\item \num{105,056 e3}
+\end{itemize}
+
+Vielleicht mag es auf den ersten Blick umständlich aussehen, einheitenbehaftete Zahlen so einzugeben. Im Schreibfluss wird man dabei aber nicht stark beeinträchtigt\footnote{vgl. viele Mausklicks im Formeleditor von MS\,Word}. Zudem muss man sich nicht um die korrekte Darstellung kümmern.
+
+\chapter{Auswahl einer Tisch-Farbe}
+Die Farbe rot ruft Aggressionen hervor \cite{Meier.2012}, sodass der Tisch in einer anderen Farbe lackiert werden sollte. Besonders die beruhigende Wirkung von grünen Farbtönen \cite[S.\,56]{Helmbrecht.2001} wäre wünschenswert. In \cite{Meier.2012} wird zudem die anregende Wirkung von Blau erwähnt.
+
+\bibliographystyle{plaindin}
+\bibliography{Literaturliste}
+
+\end{document}
