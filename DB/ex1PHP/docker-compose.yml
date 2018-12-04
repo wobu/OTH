@@ -1,12 +1,20 @@
-web:
-    image: oth_web
-    ports:
-        - "8080:80"
-    volumes:
-        - ./src:/src
-    links:
-        - php
-php:
-    image: oth_php
-    volumes:
-        - ./src:/src
+version: "3"
+services:
+    web:
+        image: oth_web
+        ports:
+            - "8080:80"
+        volumes:
+            - ./src:/src
+        links:
+            - php
+        networks:
+            - DB_PHP
+    php:
+        image: oth_php
+        volumes:
+            - ./src:/src
+        networks:
+            - DB_PHP
+networks:
+    DB_PHP:
