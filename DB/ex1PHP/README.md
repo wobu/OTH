@@ -6,3 +6,5 @@ build
 start with
 
     docker-compose up
+
+attach running SQL server container to the network

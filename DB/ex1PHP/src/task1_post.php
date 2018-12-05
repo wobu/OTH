@@ -1,10 +1,4 @@
-<html>
-<head>
-   <meta http-equiv="content-type" content="text/html" charset="utf-8">
-   <title>DB PHP exercise</title>
-</head>
-
-<body>
+<?php include("top.php") ?>
 <?php
 
  $Anrede = $_POST['Salutation'];
@@ -13,5 +7,4 @@
  echo "Welcome $Anrede $Name!";
 
  ?>
-</body>
-</html>
+<?php include("bottom.php") ?>
