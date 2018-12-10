@@ -93,7 +93,7 @@ namespace SkipList
         private void TraverseSkipList(SkipListElement anchor, SkipListElement val)
         {
             SkipListElement position = FindPosition(anchor, val.Value);
-            
+
             if (position.Down != null)
             {
                 TraverseSkipList(position.Down, val.Down);
@@ -144,6 +144,33 @@ namespace SkipList
 
         public bool Search(int val)
         {
+            return Search(first, val);
+        }
+
+        private bool Search(SkipListElement anchor, int val)
+        {
+            var e = anchor;
+
+            while(e != null)
+            {
+                if (e.Value == val)
+                {
+                    return true;
+                }
+
+                if (e.Next == null || e.Next.Value > val)
+                {
+                    break;
+                }
+
+                e = e.Next;
+            }
+
+            if (e.Down != null)
+            {
+               return Search(e.Down, val);
+            }
+
             return false;
         }
 
