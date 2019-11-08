@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+
+%
+% LaTeX-Code, mit MATLAB-Kommando "latex"
+% der Symbolic Toolbox erzeugt
+%
+% Grundwissen TeX / LaTex:
+%   Kommandos beginnen mit \
+%   Formeln werden im Text in einfache $-Zeichen eingebettet
+%   Formeln werden abgesetzt in doppelte $-Zeichen eingebettet, 
+%     äquivalent dazu: \[ \]
+%
+% Literatur:
+%   Das Latex-Handbuch; Lamport, Leslie
+%   Guide to LATEX; Kopka, Helmut
+%
+
+\begin{document}
+Formeln im Text: $\cos\!\left(x\right) + 3\, x^2\, y$
+oder $	\int_a^{g(b)} f(x) \, dx$.
+
+Abgesetzte Formeln:
+$$
+\cos\!\left(x\right) + 3\, x^2\, y
+$$
+\[
+	\int_a^{g(b)} f(x) \, dx
+\]
+\[
+\left(\begin{array}{ccc} 1 & 6 & 11\\ 2 & 7 & 12\\ 3 & 8 & 13\\ 4 & 9 & 14\\ 5 & 10 & 15 \end{array}\right)
+\]
+\[
+\left(\begin{array}{cccc} 1 & x & x^2 & x^3\\ 1 & y & y^2 & y^3\\ 1 & z & z^2 & z^3 \end{array}\right)
+\]
+Mehrzeilige abgesetzte Formeln, Ausrichtung am Gleichheitszeichen
+\begin{eqnarray}
+z &=& \cos\!\left(x\right) + 3\, x^2\, y
+\\
+I &=& \int_a^{g(b)} f(x) \, dx
+\\
+A &=& \left(\begin{array}{ccc} 1 & 6 & 11\\ 2 & 7 & 12\\ 3 & 8 & 13\\ 4 & 9 & 14\\ 5 & 10 & 15 \end{array}\right)
+\\
+B &=& \left(\begin{array}{cccc} 1 & x & x^2 & x^3\\ 1 & y & y^2 & y^3\\ 1 & z & z^2 & z^3 \end{array}\right)
+\end{eqnarray}
+
+\end{document}
